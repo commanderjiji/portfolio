@@ -30,10 +30,13 @@ import { ScrollShadow } from "@nextui-org/scroll-shadow";
 import { Fragment, useEffect } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
 import ContentsModal from "../components/ContentsModal";
-import ModalContent1 from "../components/ModalContent1";
-import ModalContent2 from "../components/ModalContent2";
+// import ModalContent1, { header as Header1, bodyContent, FooterContent } from "../components/ModalContent1";
+// import ModalContent2 from "../components/ModalContent2";
 import Cards from "../components/Cards";
 import Modals from "../components/Modals";
+
+import ModalContent1, { header as Header1, bodyContent, FooterContent } from "../components/ModalContent1";
+import ModalContent2, { header as Header2, bodyContent as bodyContent2, FooterContent as FooterContent2 } from "../components/ModalContent2";
 
 // import "flowbite";
 import { Carousel } from "flowbite-react";
@@ -63,13 +66,29 @@ export default function Home() {
 	// 	onOpen();
 	// };
 
-	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [ModalContent, setModalContent] = useState(null);
+	// const [isModalOpen, setIsModalOpen] = useState(false);
+	// const [ModalContent, setModalContent] = useState(null);
 
-	const handleCardClick = (content) => {
-		setModalContent(content);
-		setIsModalOpen(true);
+	// const handleCardClick = (content) => {
+	// 	setModalContent(content);
+	// 	setIsModalOpen(true);
+	// };
+
+	// **********************
+
+	const [modalData, setModalData] = useState({ isOpen: false, header: null, body: null, footer: null });
+
+	const handleModalOpen = (header, body, footer) => {
+		setModalData({ isOpen: true, header, body, footer });
 	};
+
+	const handleModalClose = () => {
+		setModalData({ isOpen: false, header: null, body: null, footer: null });
+	};
+
+	// const [isModalOpen, setModalOpen] = React.useState(false);
+
+	// const handleModalClose = () => setModalOpen(false);
 
 	return (
 		<div className={darkMode ? "dark" : ""}>
@@ -195,13 +214,13 @@ export default function Home() {
 						>
 							<Tab className="" title="Website">
 								<div className="flex h-full items-center justify-center pt-16 bg-slate-700">
-									<Card isPressable onClick={() => handleCardClick(<ModalContent1 />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+									<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
 										<CardBody className=" overflow-hidden py-2 ">
 											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
 										</CardBody>
 										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">Frontend Radio</h4>
-											<small className="text-default-500 line-clamp-4 ">When the rain Is blowing in your face And the whole world Is on your case I could offer you A warm embrace To make you feel my love. When the evening shadows And the stars appear And there is no one there To dry your tears I could hold you For a million years To make you feel my love</small>
+											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
+											<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
 										</CardHeader>
 
 										<div className="flex  pl-6  rounded-b-lg ">
@@ -216,13 +235,14 @@ export default function Home() {
 										</div>
 									</Card>
 
-									<Card isPressable onClick={() => handleCardClick(<ModalContent2 />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+									{/* onClick={() => handleCardClick(<ModalContent2 />)} */}
+									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
 										<CardBody className=" overflow-hidden py-2 ">
 											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
 										</CardBody>
 										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">Figma Baby</h4>
-											<small className="text-default-500 line-clamp-4 ">Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! Figma! </small>
+											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
 										</CardHeader>
 
 										<div className="flex  pl-6  rounded-b-lg ">
@@ -329,9 +349,13 @@ export default function Home() {
 							</Tab>
 						</Tabs>
 
-						<Modals isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+						{/* <Modals isOpen={isModalOpen} onClose={handleModalClose} headerContent={Header1} bodyContent={<ModalContent1 />} footerContent={<FooterContent onClose={handleModalClose} />} /> */}
+
+						<Modals isOpen={modalData.isOpen} onClose={handleModalClose} headerContent={modalData.header} bodyContent={modalData.body} footerContent={modalData.footer} />
+
+						{/* <Modals isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
 							{ModalContent}
-						</Modals>
+						</Modals> */}
 					</div>
 				</section>
 
