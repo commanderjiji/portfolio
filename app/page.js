@@ -202,40 +202,149 @@ export default function Home() {
 				<h3 className="text-6xl font-main bg-orange-800  ml-8  relative ">PROJECTS</h3>
 				<section className="bg-blue-700 h-custom-32 mb-20 -mt-16">
 					{/* TABS */}
-					<div className="flex flex-row w-full h-full bg-yellow-400/75 ">
+					<div className="flex flex-row  h-full bg-yellow-400/75  ">
 						<Tabs
 							radius={"none"}
 							isVertical={isVertical}
 							aria-label="Options"
-							className="flex my-auto mr-10 pt-16"
+							className="flex my-auto mr-10 pt-16 "
 							classNames={{
 								tabContent: "group-data-[selected=true]:text-dark-orange",
 							}}
 						>
 							<Tab className="" title="Website">
-								<div className="flex h-full items-center justify-center pt-16 bg-slate-700">
-									<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
-										</CardBody>
-										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
-											<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
-										</CardHeader>
+								<ScrollShadow
+									className="flex h-full items-center px-6 pt-16 bg-sky-500 overflow-x-auto w-custom-tab max-h-
+  [&::-webkit-scrollbar]:h-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-transparent
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-transparent
+  dark:[&::-webkit-scrollbar-thumb]:bg-[#1B2B46]"
+								>
+									<ol className="flex  w-1/2">
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
+												</CardHeader>
 
-										<div className="flex  pl-6  rounded-b-lg ">
-											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-													Source Code
-												</Button>
-												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-													Live Demo
-												</Button>
-											</CardFooter>
-										</div>
-									</Card>
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+															Source Code
+														</Button>
+														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+															Live Demo
+														</Button>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
 
-									{/* onClick={() => handleCardClick(<ModalContent2 />)} */}
+										{/* onClick={() => handleCardClick(<ModalContent2 />)} */}
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+															Source Code
+														</Button>
+														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+															Live Demo
+														</Button>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+															Source Code
+														</Button>
+														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+															Live Demo
+														</Button>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+															Source Code
+														</Button>
+														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+															Live Demo
+														</Button>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+															Source Code
+														</Button>
+														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+															Live Demo
+														</Button>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+									</ol>
+								</ScrollShadow>
+							</Tab>
+
+							<Tab title="Web Design">
+								<div className="flex h-full items-center justify-center">
 									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
 										<CardBody className=" overflow-hidden py-2 ">
 											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
@@ -256,94 +365,54 @@ export default function Home() {
 											</CardFooter>
 										</div>
 									</Card>
-									{/* <Modal
-										hideCloseButton
-										isOpen={isOpen}
-										onOpenChange={onOpenChange}
-										placement="center"
-										scrollBehavior="inside"
-										className=" mt-16 h-5/6 w-3/6 max-w-none"
-										classNames={{
-											body: "px-10",
-											backdrop: "bg-[#101825]/75 backdrop-opacity-40",
-											base: "border-[#292f46] bg-[#19172c] dark:bg-dark-blue text-[#a8b0d3]",
-											header: "border-b-[1px] border-[#292f46] text-dark-orange uppercase ",
-											footer: "border-t-[1px] border-[#292f46]",
-										}}
-									>
-										<ModalContent>
-											{(onClose) => (
-												<>
-													<ModalHeader className="flex flex-col gap-1 font-main text-2xl ml-2">To-Do List</ModalHeader>
-													<ScrollShadow hideScrollBar>
-														<div className="h-64 sm:h-96 mb-5">
-															<Carousel>
-																<Image src="/web1.png" alt="Image 1" className="w-full h-full object-cover" width={500} height={500} />
-																<Image src="/web2.png" alt="Image 2" className="w-full h-full object-cover" width={500} height={500} />
-																<Image src="/web3.png" alt="Image 3" className="w-full h-full object-cover" width={500} height={500} />
-																<Image src="/web4.png" alt="Image 4" className="w-full h-full object-cover" width={500} height={500} />
-															</Carousel>
-														</div>
-
-														<ModalBody className="font-sub">
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam.</p>
-															<p>Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.</p>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam. Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.</p>
-															<p>Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor quam. Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.</p>
-														</ModalBody>
-													</ScrollShadow>
-													<ModalFooter className="flex justify-start px-10 ">
-														<Button color="primary" variant="light" onPress={onClose} className="hover:bg-white/25 text-white">
-															Source Code
-														</Button>
-														<Button onPress={onClose} className="dark:bg-dark-orange dark:hover:bg-dark-orange/75">
-															Live Demo
-														</Button>
-													</ModalFooter>
-												</>
-											)}
-										</ModalContent>
-									</Modal> */}
-								</div>
-							</Tab>
-							<Tab title="Web Design">
-								<div className="flex h-full items-center justify-center">
-									<Card className="w-72 h-96  bg-blue-500 overflow-hidden">
-										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-										</CardBody>
-										<CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">Backend Radio</h4>
-											<small className="text-default-500 bg-gray-800 line-clamp-4">When the rain Is blowing in your face And the whole world Is on your case I could offer you A warm embrace To make you feel my love. When the evening shadows And the stars appear And there is no one there To dry your tears I could hold you For a million years To make you feel my love</small>
-										</CardHeader>
-									</Card>
 								</div>
 							</Tab>
 							<Tab title="Poster">
 								<div className="flex h-full items-center justify-center">
-									<Card className="w-72 h-96  bg-orange-500 overflow-hidden">
+									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
 										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web3} />
+											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
 										</CardBody>
-										<CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">Fullstack Radio</h4>
-											<small className="text-default-500 bg-gray-800 line-clamp-4">When the rain Is blowing in your face And the whole world Is on your case I could offer you A warm embrace To make you feel my love. When the evening shadows And the stars appear And there is no one there To dry your tears I could hold you For a million years To make you feel my love</small>
+										<CardHeader className="z-auto pt-2 px-4 flex-col ">
+											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
 										</CardHeader>
+
+										<div className="flex  pl-6  rounded-b-lg ">
+											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+													Source Code
+												</Button>
+												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+													Live Demo
+												</Button>
+											</CardFooter>
+										</div>
 									</Card>
 								</div>
 							</Tab>
 
 							<Tab title="Reels">
 								<div className="flex h-full items-center justify-center">
-									<Card className="w-72 h-96  bg-yellow-500 overflow-hidden">
+									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
 										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web4} />
+											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
 										</CardBody>
-										<CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">DevOps Radio</h4>
-											<small className="text-default-500 bg-gray-800 line-clamp-4">When the rain Is blowing in your face And the whole world Is on your case I could offer you A warm embrace To make you feel my love. When the evening shadows And the stars appear And there is no one there To dry your tears I could hold you For a million years To make you feel my love</small>
+										<CardHeader className="z-auto pt-2 px-4 flex-col ">
+											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
 										</CardHeader>
+
+										<div className="flex  pl-6  rounded-b-lg ">
+											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
+												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+													Source Code
+												</Button>
+												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+													Live Demo
+												</Button>
+											</CardFooter>
+										</div>
 									</Card>
 								</div>
 							</Tab>

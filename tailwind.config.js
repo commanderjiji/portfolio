@@ -69,6 +69,9 @@ module.exports = {
 				"custom-32": "35rem",
 				"custom-30": "26rem",
 			},
+			width: {
+				"custom-tab": "80rem",
+			},
 			fontSize: {
 				"10xl": "230px",
 			},
