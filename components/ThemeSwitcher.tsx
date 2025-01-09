@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
 	return (
 		<div>
 			{/* Toggle between Moon and Sun icons based on current theme */}
-			{theme === "light" ? <MoonIcon onClick={() => setTheme("dark")} className="cursor-pointer w-6 h-6" /> : <SunIcon onClick={() => setTheme("light")} className="cursor-pointer w-6 h-6" />}
+			{theme === "light" ? <MoonIcon onClick={() => setTheme("dark")} className="cursor-pointer w-6 h-6" /> : <SunIcon onClick={() => setTheme("light")} className="cursor-pointer w-6 h-6 dark:text-white" />}
 		</div>
 	);
 }

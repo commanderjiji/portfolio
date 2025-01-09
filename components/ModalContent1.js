@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import { Button } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
-export const header = "I Think They Call This Love";
+export const header = "Guess My Number";
 
 export const ModalCarousel = () => (
 	<div className=" h-64 sm:h-96 mb-5">
@@ -14,16 +15,17 @@ export const ModalCarousel = () => (
 	</div>
 );
 
-export const bodyContent = <p>They say, you know when you know So let's face it, you had me at hello Hesitation never helps How could this be anything, anything else? When all I dream of is your eyes All I long for is your touch And, darlin', something tells me that's enough, mm You can say that I'm a fool And I don't know very much But I think they call this love</p>;
+export const bodyContent = <p>This is a Guess My Number game!</p>;
 
-export const FooterContent = ({ onClose }) => (
-	<div className="flex justify-start px-10">
-		<Button color="primary" variant="light" onPress={onClose} className="hover:bg-white/25 text-white">
+export const FooterContent = () => (
+	<div className="flex justify-start gap-2">
+		<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modal-source">
 			Source Code
-		</Button>
-		<Button onPress={onClose} className="dark:bg-dark-orange dark:hover:bg-dark-orange/75">
+		</Link>
+
+		<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modal-live">
 			Live Demo
-		</Button>
+		</Link>
 	</div>
 );
 

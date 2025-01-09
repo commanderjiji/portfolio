@@ -24,17 +24,17 @@ const metadata = {
 export default function RootLayout({ children }) {
 	// const [darkMode, setDarkMode] = useState(false);
 
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const [visible, setVisible] = useState(false);
 
-	const menuItems = ["Profile", "Dashboard", "Activity", "Analytics", "System", "Deployments", "My Settings", "Team Settings", "Help & Feedback", "Log Out"];
+	const openModal = () => setVisible(true);
+	const closeModal = () => setVisible(false);
 
 	return (
 		<html lang="en">
 			<body>
 				<Providers>
-					<Navbar onMenuOpenChange={setIsMenuOpen}>
+					<Navbar>
 						<NavbarContent>
-							<NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
 							<NavbarBrand>
 								<a href="./">
 									<h1 className="text-xl font-main uppercase dark:text-white">Jerome Almoguera</h1>
@@ -47,20 +47,19 @@ export default function RootLayout({ children }) {
 								<ThemeSwitcher /> {/* Dark mode button */}
 							</NavbarItem>
 							<NavbarItem>
-								<Button color="warning" variant="flat">
+								<Button color="warning" variant="flat" onClick={openModal}>
 									Resume
 								</Button>
+								<Modal open={visible} onClose={closeModal} width="80%">
+									<ModalHeader>
+										<h2>My Resume</h2>
+									</ModalHeader>
+									<ModalBody>
+										<iframe src="../public/resume.pdf" width="100%" height="500px" style={{ border: "none" }} title="Resume"></iframe>
+									</ModalBody>
+								</Modal>
 							</NavbarItem>
 						</NavbarContent>
-						<NavbarMenu>
-							{menuItems.map((item, index) => (
-								<NavbarMenuItem key={`${item}-${index}`}>
-									<Link color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"} className="w-full" href="#" size="lg">
-										{item}
-									</Link>
-								</NavbarMenuItem>
-							))}
-						</NavbarMenu>
 					</Navbar>
 
 					{children}
