@@ -105,7 +105,7 @@ export default function Home() {
 							<h2 className=" text-9xl py-2 font-main dark:text-white  tracking-tighter ">JEROME</h2>
 							<h2 className=" text-9xl py-2 font-main -mt-11 dark:text-white tracking-tighter ">ALMOGUERA</h2>
 						</div>
-						<h3 className="font-sub text-2xl py-2 text-left dark:text-white">Front-End Developer · Graphic Designer</h3>
+						<h3 className="font-sub text-2xl py-2 text-left dark:text-white">Aspiring Front-End Developer · Graphic Designer</h3>
 						<div className="flex justify-start space-x-5">
 							<a href="mailto:jeromealmoguera@gmail.com" target="_blank" className="text-dark-blue dark:text-white/75 hover:dark:text-white hover:text-slate-700">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
@@ -158,51 +158,51 @@ export default function Home() {
 				</section>
 
 				{/* SKILLS */}
-				<section className="mb-20 bg-green-600">
+				<section className="mb-20 ">
 					<div>
-						<h3 className=" text-6xl py-1 font-main font-black ml-8">SKILLS</h3>
+						<h3 className=" text-6xl py-1 font-main font-black ml-8 dark:text-white">SKILLS</h3>
 					</div>
 
 					<div className=" lg:flex gap-5 pl-8">
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={html} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={css} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={js} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={tailwind} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={bootstrap} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={react} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={php} width={60} height={60} />
 						</div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-xl my-10 ">
+						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={laravel} width={60} height={60} />
 						</div>
 					</div>
 				</section>
 
 				{/*  PORTFOLIO */}
-				<h3 className="text-6xl font-main bg-orange-800  ml-8  relative ">PROJECTS</h3>
-				<section className="bg-blue-700 h-custom-32 mb-20 -mt-16">
+				<h3 className="text-6xl font-main ml-8  relative dark:text-white">PROJECTS</h3>
+				<section className="h-custom-32 mb-20 -mt-16">
 					{/* TABS */}
-					<div className="flex flex-row  h-full bg-yellow-400/75  ">
+					<div className="flex flex-row  h-full">
 						<Tabs
 							radius={"none"}
 							isVertical={isVertical}
@@ -214,7 +214,7 @@ export default function Home() {
 						>
 							<Tab className="" title="Website">
 								<ScrollShadow
-									className="flex h-full items-center px-6 pt-16 bg-sky-500 overflow-x-auto w-custom-tab max-h-
+									className="flex h-full items-center px-6 pt-16  overflow-x-auto w-custom-tab max-h-
   [&::-webkit-scrollbar]:h-2
   [&::-webkit-scrollbar-track]:rounded-full
   [&::-webkit-scrollbar-track]:bg-transparent
@@ -223,23 +223,23 @@ export default function Home() {
   dark:[&::-webkit-scrollbar-track]:bg-transparent
   dark:[&::-webkit-scrollbar-thumb]:bg-[#1B2B46]"
 								>
-									<ol className="flex  w-1/2">
+									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
+													<Image alt="Card background" className="object-cover  size-fit" src={web1} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header1}</h4>
 													<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
 												</CardHeader>
 
 												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Button className="text-tiny text-white bg-white/25 hover:bg-white/20 rounded-full" variant="light" color="default" radius="none" size="sm">
 															Source Code
 														</Button>
-														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+														<Button className="text-tiny bg-dark-orange hover:bg-orange-hover  text-white rounded-full" variant="solid" color="default" radius="none" size="sm">
 															Live Demo
 														</Button>
 													</CardFooter>
@@ -249,9 +249,9 @@ export default function Home() {
 
 										{/* onClick={() => handleCardClick(<ModalContent2 />)} */}
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
+											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
+													<Image alt="Card background" className="object-cover  size-fit" src={web2} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
 													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
@@ -259,11 +259,11 @@ export default function Home() {
 												</CardHeader>
 
 												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Button className="text-tiny text-white bg-white/25 hover:bg-white/20 rounded-full" variant="light" color="default" radius="none" size="sm">
 															Source Code
 														</Button>
-														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+														<Button className="text-tiny bg-dark-orange hover:bg-orange-hover  text-white rounded-full" variant="solid" color="default" radius="none" size="sm">
 															Live Demo
 														</Button>
 													</CardFooter>
