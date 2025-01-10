@@ -38,6 +38,8 @@ import Modals from "../components/Modals";
 import ModalContent1, { header as Header1, bodyContent, FooterContent } from "../components/ModalContent1";
 import ModalContent2, { header as Header2, bodyContent as bodyContent2, FooterContent as FooterContent2 } from "../components/ModalContent2";
 
+
+
 // import "flowbite";
 import { Carousel } from "flowbite-react";
 

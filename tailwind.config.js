@@ -3,10 +3,19 @@ const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	webpack: (config) => {
+		//react-pdf
 		config.resolve.alias.canvas = false;
 
 		return config;
 	},
+	experimental: {
+		turbo: {
+			resolveAlias: {
+				canvas: "./empty-module.ts",
+			},
+		},
+	},
+	swcMinify: false,
 	darkMode: "class",
 	content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/@nextui-org/theme/dist/components/(navbar|tabs).js", "./node_modules/flowbite/**/*.js", flowbite.content()],
 	theme: {
@@ -72,6 +81,7 @@ module.exports = {
 			},
 			width: {
 				"custom-tab": "80rem",
+				"custom-resume": "420rem",
 			},
 			fontSize: {
 				"10xl": "230px",
