@@ -76,12 +76,14 @@ module.exports = {
 				// }
 			},
 			height: {
+				modalH: "37rem",
 				"custom-32": "35rem",
 				"custom-30": "26rem",
 			},
 			width: {
 				"custom-tab": "80rem",
 				"custom-resume": "420rem",
+				"custom-modal": "35rem",
 			},
 			fontSize: {
 				"10xl": "230px",

@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
 
 //* Header */
-export const header = "Birds Of A Feather";
+export const header = "Guess My Number";
 
 //* Image/Carousel */
 export const ModalCarousel = () => (
@@ -18,7 +18,14 @@ export const ModalCarousel = () => (
 );
 
 //* Body */
-export const bodyContent = <p>I want you to stay 'Til I'm in the grave 'Til I rot away, dead and buried 'Til I'm in the casket you carry If you go, I'm going too, uh 'Cause it was always you, alright And if I'm turning blue, please don't save me Nothing left to lose without my baby</p>;
+export const bodyContent = (
+	<p>
+		This third project is a simple game where users guess a secret number between 1 and 20. If the user's input is lower than the secret number, the game displays the message, "Too low!" Oppositely, if the input is higher, the message "Too high!" appears. When the user correctly guesses the secret number, their score is calculated based on the number of attempts, and the background changes to green.
+		<br />
+		<br />
+		All the functionalities in this project are implemented using DOM manipulation techniques, functions, and if-else statements.
+	</p>
+);
 
 //* Footer */
 export const FooterContent = () => (
@@ -27,7 +34,7 @@ export const FooterContent = () => (
 			Source Code
 		</Link>
 
-		<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modal-live">
+		<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modal-live">
 			Live Demo
 		</Link>
 	</div>
