@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body>
 				<Providers>
-					<Navbar>
+					<Navbar className="dark:bg-slate-800/50 ">
 						<NavbarContent>
 							<NavbarBrand>
 								<a href="./">
@@ -69,9 +69,7 @@ export default function RootLayout({ children }) {
 						</NavbarContent>
 
 						<NavbarContent justify="end">
-							<NavbarItem className="hidden lg:flex">
-								<ThemeSwitcher /> {/* Dark mode button */}
-							</NavbarItem>
+							<NavbarItem className="hidden lg:flex">{/* <ThemeSwitcher /> Dark mode button */}</NavbarItem>
 							<NavbarItem>
 								<Button color="warning" variant="flat" onPress={onOpen}>
 									Resume
@@ -96,7 +94,7 @@ export default function RootLayout({ children }) {
 															<ZoomOut>
 																{(props) => (
 																	<button onClick={props.onClick} className="text-zinc-400 px-3 ">
-																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
 																			<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM13.5 10.5h-6" />
 																		</svg>
 																	</button>
@@ -106,7 +104,7 @@ export default function RootLayout({ children }) {
 															<ZoomIn>
 																{(props) => (
 																	<button onClick={props.onClick} className="text-zinc-400 px-3 ">
-																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
 																			<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
 																		</svg>
 																	</button>

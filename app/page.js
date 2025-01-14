@@ -34,11 +34,25 @@ import ContentsModal from "../components/ContentsModal";
 // import ModalContent2 from "../components/ModalContent2";
 import Cards from "../components/Cards";
 import Modals from "../components/Modals";
+import { Link } from "@nextui-org/react";
 
-import ModalContent1, { header as Header1, bodyContent, FooterContent } from "../components/ModalContent1";
-import ModalContent2, { header as Header2, bodyContent as bodyContent2, FooterContent as FooterContent2 } from "../components/ModalContent2";
+import ModalWindowContent, { header as Header1, bodyContent as bodyContent1, FooterContent as FooterContent1 } from "../components/modalContents/modalWindow/ModalWindowContent";
+import ModalThumbnail from "../components/modalContents/modalWindow/thumbnail.png";
 
+import GuessMyNumberContent, { header as Header3, bodyContent as bodyContent3, FooterContent as FooterContent3 } from "../components/modalContents/guessMyNumber/GuessMyNumberContent";
+import guessThumbnail from "../components/modalContents/guessMyNumber/thumbnail.png";
 
+import PigGameContent, { header as Header2, bodyContent as bodyContent2, FooterContent as FooterContent2 } from "../components/modalContents/pigGame/PigGameContent";
+import PigGameThumbnail from "../components/modalContents/pigGame/thumbnail.png";
+
+import Belle, { header as Header4, bodyContent as bodyContent4 } from "../components/modalContents/belle/Belle";
+import BelleThumbnail from "../components/modalContents/belle/thumbnail.png";
+
+import BibleStudy, { header as Header5, bodyContent as bodyContent5 } from "../components/modalContents/biblestudy/BibleStudy";
+import BibleStudyThumbnail from "../components/modalContents/biblestudy/thumbnail.png";
+
+import CapstonePoster, { header as Header6, bodyContent as bodyContent6 } from "../components/modalContents/capstoneposter/CapstonePoster";
+import CapstonePosterThumbnail from "../components/modalContents/capstoneposter/capstone.jpg";
 
 // import "flowbite";
 import { Carousel } from "flowbite-react";
@@ -214,6 +228,7 @@ export default function Home() {
 								tabContent: "group-data-[selected=true]:text-dark-orange",
 							}}
 						>
+							{/* TAB Website  */}
 							<Tab className="" title="Website">
 								<ScrollShadow
 									className="flex h-full items-center px-6 pt-16  overflow-x-auto w-custom-tab max-h-
@@ -227,116 +242,71 @@ export default function Home() {
 								>
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalWindowContent />, <FooterContent1 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover  size-fit" src={web1} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header1}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Button className="text-tiny text-white bg-white/25 hover:bg-white/20 rounded-full" variant="light" color="default" radius="none" size="sm">
-															Source Code
-														</Button>
-														<Button className="text-tiny bg-dark-orange hover:bg-orange-hover  text-white rounded-full" variant="solid" color="default" radius="none" size="sm">
-															Live Demo
-														</Button>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										{/* onClick={() => handleCardClick(<ModalContent2 />)} */}
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover  size-fit" src={web2} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Button className="text-tiny text-white bg-white/25 hover:bg-white/20 rounded-full" variant="light" color="default" radius="none" size="sm">
-															Source Code
-														</Button>
-														<Button className="text-tiny bg-dark-orange hover:bg-orange-hover  text-white rounded-full" variant="solid" color="default" radius="none" size="sm">
-															Live Demo
-														</Button>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-															Source Code
-														</Button>
-														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-															Live Demo
-														</Button>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-															Source Code
-														</Button>
-														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-															Live Demo
-														</Button>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalContent1 />, <FooterContent onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web1} />
+													<Image alt="Card background" className="object-cover size-full " src={ModalThumbnail} width={2000} height={2000} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
 													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent}</small>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent1}</small>
 												</CardHeader>
 
 												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-														<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/modal-window" target="_blank" className="btn-modalOut-source">
 															Source Code
-														</Button>
-														<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
+														</Link>
+														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/modal-window/" target="_blank" className="btn-modalOut-live">
 															Live Demo
-														</Button>
+														</Link>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header2, <PigGameContent />, <FooterContent2 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover size-fit h-max " src={PigGameThumbnail} width={2000} height={2000} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/Pig-game" target="_blank" className="btn-modalOut-source">
+															Source Code
+														</Link>
+
+														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/Pig-game/" target="_blank" className="btn-modalOut-live">
+															Live Demo
+														</Link>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header3}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent3}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
+															Source Code
+														</Link>
+
+														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
+															Live Demo
+														</Link>
 													</CardFooter>
 												</div>
 											</Card>
@@ -345,78 +315,112 @@ export default function Home() {
 								</ScrollShadow>
 							</Tab>
 
+							{/* TAB WEB DESIGN  */}
 							<Tab title="Web Design">
-								<div className="flex h-full items-center justify-center">
-									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-										</CardBody>
-										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-										</CardHeader>
+								<ScrollShadow
+									className="flex h-full items-center px-6 pt-16  overflow-x-auto w-custom-tab max-h-
+  [&::-webkit-scrollbar]:h-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-transparent
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-transparent
+  dark:[&::-webkit-scrollbar-thumb]:bg-[#1B2B46]"
+								>
+									<ol className="group flex w-1/2">
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header4, <Belle />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center py-2">
+													<Image alt="Card background" className="object-cover size-fit  w-full" src={BelleThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header4}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent4}</small>
+												</CardHeader>
+											</Card>
+										</li>
 
-										<div className="flex  pl-6  rounded-b-lg ">
-											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-													Source Code
-												</Button>
-												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-													Live Demo
-												</Button>
-											</CardFooter>
-										</div>
-									</Card>
-								</div>
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header5, <BibleStudy />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center py-2">
+													<Image alt="Card background" className="object-cover size-fit  w-full" src={BibleStudyThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header5}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent5}</small>
+												</CardHeader>
+											</Card>
+										</li>
+									</ol>
+								</ScrollShadow>
 							</Tab>
+
+							{/* TAB POSTER  */}
 							<Tab title="Poster">
-								<div className="flex h-full items-center justify-center">
-									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-										</CardBody>
-										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-										</CardHeader>
-
-										<div className="flex  pl-6  rounded-b-lg ">
-											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-													Source Code
-												</Button>
-												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-													Live Demo
-												</Button>
-											</CardFooter>
-										</div>
-									</Card>
-								</div>
+								<ScrollShadow
+									className="flex h-full items-center px-6 pt-16  overflow-x-auto w-custom-tab max-h-
+  [&::-webkit-scrollbar]:h-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-transparent
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-transparent
+  dark:[&::-webkit-scrollbar-thumb]:bg-[#1B2B46]"
+								>
+									<ol className="group flex w-1/2">
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header6, <CapstonePoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={CapstonePosterThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header6}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent6}</small>
+												</CardHeader>
+											</Card>
+										</li>
+									</ol>
+								</ScrollShadow>
 							</Tab>
 
+							{/* TAB REELS  */}
 							<Tab title="Reels">
-								<div className="flex h-full items-center justify-center">
-									<Card isPressable onPress={() => handleModalOpen(Header2, <ModalContent2 />, <FooterContent2 onClose={handleModalClose} />)} className="w-72 h-custom-30 my-auto mr-10 bg-red-700 overflow-hidden ">
-										<CardBody className=" overflow-hidden py-2 ">
-											<Image alt="Card background" className="object-cover rounded-xl size-fit" src={web2} />
-										</CardBody>
-										<CardHeader className="z-auto pt-2 px-4 flex-col ">
-											<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
-											<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
-										</CardHeader>
+								<ScrollShadow
+									className="flex h-full items-center px-6 pt-16  overflow-x-auto w-custom-tab max-h-
+  [&::-webkit-scrollbar]:h-2
+  [&::-webkit-scrollbar-track]:rounded-full
+  [&::-webkit-scrollbar-track]:bg-transparent
+  [&::-webkit-scrollbar-thumb]:rounded-full
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-transparent
+  dark:[&::-webkit-scrollbar-thumb]:bg-[#1B2B46]"
+								>
+									<ol className="group flex w-1/2">
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header3}</h4>
+													<small className="text-default-500 line-clamp-4 ">{bodyContent3}</small>
+												</CardHeader>
 
-										<div className="flex  pl-6  rounded-b-lg ">
-											<CardFooter className="  justify-evenly before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl  bottom-1 w-[calc(80%_-_8px)] shadow-small ml-1">
-												<Button className="text-tiny text-white " variant="light" color="default" radius="none" size="sm">
-													Source Code
-												</Button>
-												<Button className="text-tiny text-white " variant="solid" color="default" radius="none" size="sm">
-													Live Demo
-												</Button>
-											</CardFooter>
-										</div>
-									</Card>
-								</div>
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
+															Source Code
+														</Link>
+
+														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
+															Live Demo
+														</Link>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+									</ol>
+								</ScrollShadow>
 							</Tab>
 						</Tabs>
 
@@ -431,68 +435,68 @@ export default function Home() {
 				</section>
 
 				{/* ABOU ME */}
-				<section className=" bg-red-600 mb-20 h-custom-32">
-					<h3 className="text-6xl py-1 font-main font-black ml-8 bg-orange-800">ABOUT ME</h3>
+				<section className="  mb-20 h-modalH">
+					<h3 className="text-6xl py-1 font-main font-black ml-8 dark:text-white">ABOUT ME</h3>
 					<div className="flex ">
-						<div className="flex-1 bg-slate-500 pl-8">
+						<div className="flex-1  pl-8">
 							<div className="flex  my-8">
 								<Image alt="Content" src={web6} width={400} height={400} className="w-40 h-40 rounded-full object-cover size-min " />
 							</div>
-							<div className="mb-5 bg-amber-200/75 ">
+							<div className="mb-5  ">
 								<h4 className="text-5xl tracking-tighter text-gray-800 dark:text-gray-200  font-main font-black uppercase ">Jerome Almoguera</h4>
-								<p className="text-md  text-gray-800 dark:text-gray-200  font-sub">Front-End Developer • Front-end Developer</p>
+								<p className="text-md  text-gray-800 dark:text-gray-200  font-sub">Aspiring Front-End Developer • Front-end Developer</p>
 							</div>
-							<p className="text-md py-2 pr-10 text-gray-800 dark:text-gray-200 font-sub bg-cyan-200/75">When the rain Is blowing in your face And the whole world Is on your case I could offer you A warm embrace To make you feel my love. When the evening shadows And the stars appear And there is no one there To dry your tears I could hold you For a million years To make you feel my love</p>
+							<p className="text-md py-2 pr-10 text-gray-800 dark:text-gray-200 font-sub ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
 						</div>
 
 						{/* WORK EXPERIENCE */}
 
-						<ScrollShadow hideScrollBar className="flex-1 bg-blue-400 overflow-scroll overflow-x-hidden ">
-							<ol className=" h-custom-30   ">
-								<li className="mb-5">
-									<div className="bg-green-700 flex">
-										<header className="bg-green-800 flex-2 pr-5 font-sub text-xs font-medium uppercase pt-1 text-white/75  ">September — JULY 2016</header>
+						<ScrollShadow hideScrollBar className="flex-1  overflow-scroll overflow-x-hidden ">
+							<ol className="group h-custom-30   ">
+								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
+									<div className=" flex">
+										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75 ">September 2023 — JULY 2024</header>
 										<div className="flex-1">
-											<h5 className="font-sub text-lg font-semibold mb-3">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">Desktop support engineering is a sector of engineering that involves resolving a variety of information technology (IT) issues. As IT professionals, desktop support engineers fix issues with a company's desktop computers. They also work with laptops and mitigate security and server issues that affect business networks.</p>
-										</div>
-									</div>
-								</li>
-								<li className="mb-5">
-									<div className="bg-green-700 flex">
-										<header className="bg-green-800 flex-2 pr-5 font-sub text-xs font-medium uppercase pt-1 text-white/75">September — JULY 2016</header>
-										<div className="flex-1">
-											<h5 className="font-sub text-lg font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">Desktop support engineering is a sector of engineering that involves resolving a variety of information technology (IT) issues. As IT professionals, desktop support engineers fix issues with a company's desktop computers. They also work with laptops and mitigate security and server issues that affect business networks.</p>
-										</div>
-									</div>
-								</li>
-								<li className="mb-5">
-									<div className="bg-green-700 flex">
-										<header className="bg-green-800 flex-2 pr-5 font-sub text-xs font-medium uppercase pt-1 text-white/75">September — JULY 2016</header>
-										<div className="flex-1">
-											<h5 className="font-sub text-lg font-semibold mb-3">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">Desktop support engineering is a sector of engineering that involves resolving a variety of information technology (IT) issues. As IT professionals, desktop support engineers fix issues with a company's desktop computers. They also work with laptops and mitigate security and server issues that affect business networks.</p>
+											<h5 className="font-sub text-md font-semibold mb-3 ">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
+											<p className="font-sub text-sm text-white/75">
+												<ul>
+													<li className="mb-2">• Install, configure, and maintain computer hardware components, peripherals, and software applications.</li>
+													<li className="mb-2">• Diagnose and resolve hardware and software issues, including troubleshooting and providing technical support to end‑users.</li>
+													<li className="mb-2">• Analyze technical problems, identify root causes, and implement effective solutions to minimize downtime and disruptions.</li>
+													<li className="mb-2">• Provide remotetechnical assistance to off‑site users through phone, email, or remote desktop tools (AnyDesk).</li>
+												</ul>
+											</p>
 										</div>
 									</div>
 								</li>
 
-								<li className="mb-5">
-									<div className="bg-green-700 flex">
-										<header className="bg-green-800 flex-2 pr-5 font-sub text-xs font-medium uppercase pt-1 text-white/75">September — JULY 2016</header>
+								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
+									<div className=" flex">
+										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
 										<div className="flex-1">
-											<h5 className="font-sub text-lg font-semibold mb-3">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">Desktop support engineering is a sector of engineering that involves resolving a variety of information technology (IT) issues. As IT professionals, desktop support engineers fix issues with a company's desktop computers. They also work with laptops and mitigate security and server issues that affect business networks.</p>
+											<h5 className="font-sub text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
+											<p className="font-sub text-sm text-white/75">
+												<ul>
+													<li className="mb-2">• Collaborated in Agile development environments, participating in daily stand‑ups, sprint planning, demonstrations, and code reviews to deliver high‑quality code within project timelines.</li>
+													<li className="mb-2">• Translated design mock‑ups into pixel‑perfect, standards‑compliant HTML, CSS, and JavaScript code using Figma.</li>
+													<li className="mb-2">• Built and maintained reusable code libraries, frameworks (UI Kit), and components to streamline development processes and improve efficiency.</li>
+												</ul>
+											</p>
 										</div>
 									</div>
 								</li>
-
-								<li className="mb-5">
-									<div className="bg-green-700 flex">
-										<header className="bg-green-800 flex-2 pr-5 font-sub text-xs font-medium uppercase pt-1 text-white/75">September — JULY 2016</header>
+								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
+									<div className=" flex">
+										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
 										<div className="flex-1">
-											<h5 className="font-sub text-lg font-semibold mb-3">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">Desktop support engineering is a sector of engineering that involves resolving a variety of information technology (IT) issues. As IT professionals, desktop support engineers fix issues with a company's desktop computers. They also work with laptops and mitigate security and server issues that affect business networks.</p>
+											<h5 className="font-sub text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
+											<p className="font-sub text-sm text-white/75">
+												<ul>
+													<li className="mb-2">• Collaborated in Agile development environments, participating in daily stand‑ups, sprint planning, demonstrations, and code reviews to deliver high‑quality code within project timelines.</li>
+													<li className="mb-2">• Translated design mock‑ups into pixel‑perfect, standards‑compliant HTML, CSS, and JavaScript code using Figma.</li>
+													<li className="mb-2">• Built and maintained reusable code libraries, frameworks (UI Kit), and components to streamline development processes and improve efficiency.</li>
+												</ul>
+											</p>
 										</div>
 									</div>
 								</li>

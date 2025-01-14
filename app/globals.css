@@ -36,6 +36,18 @@ body {
 	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-sm rounded-md px-4 py-3;
 }
 
+.btn-modalOut-source {
+	@apply bg-white/25 hover:bg-white/20 font-sub text-xs rounded-full px-3 py-2;
+}
+
+.btn-modalOut-live {
+	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs rounded-full px-3 py-2
+}
+
+.code-highlight {
+	@apply bg-orange-200/20 rounded p-0.5 text-orange-400;
+}
+
 button {
 	@apply font-sub;
 }
