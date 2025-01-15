@@ -10,8 +10,23 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeSwitcher } from "../components/ThemeSwitcher";
 import { Providers } from "./Providers";
-import { Document } from "react-pdf";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
+import { ScrollShadow } from "@nextui-org/scroll-shadow";
+
+import { Worker, Viewer, SpecialZoomLevel, ZoomEvent } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+
+import { zoomPlugin } from "@react-pdf-viewer/zoom";
+import "@react-pdf-viewer/zoom/lib/styles/index.css";
+import { RenderCurrentScaleProps } from "@react-pdf-viewer/zoom";
+
+import { RenderZoomInProps } from "@react-pdf-viewer/zoom";
+import { RenderZoomOutProps } from "@react-pdf-viewer/zoom";
+
+// import { Document, Page } from "react-pdf";
+// import { pdfjs } from "react-pdf";
+
+// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,17 +39,28 @@ const metadata = {
 export default function RootLayout({ children }) {
 	// const [darkMode, setDarkMode] = useState(false);
 
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const resume = "/resume.pdf";
 
-	const menuItems = ["Profile", "Dashboard", "Activity", "Analytics", "System", "Deployments", "My Settings", "Team Settings", "Help & Feedback", "Log Out"];
+	const [visible, setVisible] = useState(false);
+
+	const { isOpen, onOpen, onOpenChange } = useDisclosure();
+	const [numPages, setNumPages] = useState(null); // Track the number of pages
+	const [pageNumber, setPageNumber] = useState(1);
+
+	// Handle when the document is loaded
+	const onDocumentLoadSuccess = ({ numPages }) => {
+		setNumPages(numPages);
+	};
+
+	const zoomPluginInstance = zoomPlugin(); // Initialize the plugin
+	const { ZoomIn, ZoomOut, CurrentScale } = zoomPluginInstance;
 
 	return (
 		<html lang="en">
 			<body>
 				<Providers>
-					<Navbar onMenuOpenChange={setIsMenuOpen}>
+					<Navbar className="dark:bg-slate-800/50 ">
 						<NavbarContent>
-							<NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
 							<NavbarBrand>
 								<a href="./">
 									<h1 className="text-xl font-main uppercase dark:text-white">Jerome Almoguera</h1>
@@ -43,24 +69,70 @@ export default function RootLayout({ children }) {
 						</NavbarContent>
 
 						<NavbarContent justify="end">
-							<NavbarItem className="hidden lg:flex">
-								<ThemeSwitcher /> {/* Dark mode button */}
-							</NavbarItem>
+							<NavbarItem className="hidden lg:flex">{/* <ThemeSwitcher /> Dark mode button */}</NavbarItem>
 							<NavbarItem>
-								<Button color="warning" variant="flat">
+								<Button color="warning" variant="flat" onPress={onOpen}>
 									Resume
 								</Button>
+								<Modal hideCloseButton isOpen={isOpen} onOpenChange={onOpenChange} placement="center" className="bg-slate-800  h-custom-32">
+									<ModalContent>
+										{(onClose) => (
+											<>
+												{/* <ModalHeader className="flex flex-col gap-1">Resume</ModalHeader> */}
+												<ScrollShadow hideScrollBar>
+													<ModalBody className="">
+														<div
+															style={{
+																alignItems: "center",
+
+																borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+																display: "flex",
+																justifyContent: "center",
+															}}
+															className="font-sub dark:text-white py-3"
+														>
+															<ZoomOut>
+																{(props) => (
+																	<button onClick={props.onClick} className="text-zinc-400 px-3 ">
+																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+																			<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM13.5 10.5h-6" />
+																		</svg>
+																	</button>
+																)}
+															</ZoomOut>
+															<CurrentScale>{(props) => <>{`${Math.round(props.scale * 100)}%`}</>}</CurrentScale>
+															<ZoomIn>
+																{(props) => (
+																	<button onClick={props.onClick} className="text-zinc-400 px-3 ">
+																		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+																			<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
+																		</svg>
+																	</button>
+																)}
+															</ZoomIn>
+														</div>
+														<Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
+															<Viewer fileUrl={resume} plugins={[zoomPluginInstance]} />
+														</Worker>
+													</ModalBody>
+													<ModalFooter className="justify-between">
+														<Button color="danger" variant="light" onPress={onClose}>
+															Close
+														</Button>
+
+														<a href={resume} download="resume.pdf">
+															<Button color="success" variant="flat">
+																Download Resume
+															</Button>
+														</a>
+													</ModalFooter>
+												</ScrollShadow>
+											</>
+										)}
+									</ModalContent>
+								</Modal>
 							</NavbarItem>
 						</NavbarContent>
-						<NavbarMenu>
-							{menuItems.map((item, index) => (
-								<NavbarMenuItem key={`${item}-${index}`}>
-									<Link color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"} className="w-full" href="#" size="lg">
-										{item}
-									</Link>
-								</NavbarMenuItem>
-							))}
-						</NavbarMenu>
 					</Navbar>
 
 					{children}

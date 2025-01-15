@@ -3,18 +3,27 @@ const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	webpack: (config) => {
+		//react-pdf
 		config.resolve.alias.canvas = false;
 
 		return config;
 	},
+	experimental: {
+		turbo: {
+			resolveAlias: {
+				canvas: "./empty-module.ts",
+			},
+		},
+	},
+	swcMinify: false,
 	darkMode: "class",
 	content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/@nextui-org/theme/dist/components/(navbar|tabs).js", "./node_modules/flowbite/**/*.js", flowbite.content()],
 	theme: {
 		extend: {
-			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-			},
+			// backgroundImage: {
+			// 	"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+			// 	"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+			// },
 			fontFamily: {
 				main: "nexa",
 				mainLight: "Nexa Light",
@@ -23,7 +32,8 @@ module.exports = {
 			colors: {
 				"dark-blue": "#101825",
 				"dark-blueLight": "#131D2D",
-				"dark-orange": "#e76928",
+				"dark-orange": "#E76928",
+				"orange-hover": "#C75D28",
 				// background: 'hsl(var(--background))',
 				// foreground: 'hsl(var(--foreground))',
 				// card: {
@@ -66,8 +76,14 @@ module.exports = {
 				// }
 			},
 			height: {
+				modalH: "37rem",
 				"custom-32": "35rem",
 				"custom-30": "26rem",
+			},
+			width: {
+				"custom-tab": "80rem",
+				"custom-resume": "420rem",
+				"custom-modal": "35rem",
 			},
 			fontSize: {
 				"10xl": "230px",
@@ -75,11 +91,11 @@ module.exports = {
 			letterSpacing: {
 				widest: "1.11em",
 			},
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
-			},
+			// borderRadius: {
+			// 	lg: "var(--radius)",
+			// 	md: "calc(var(--radius) - 2px)",
+			// 	sm: "calc(var(--radius) - 4px)",
+			// },
 		},
 	},
 	plugins: [nextui(), require("flowbite/plugin"), require("tailwindcss-animate")],

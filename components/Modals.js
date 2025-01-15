@@ -59,62 +59,22 @@
 
 //************************ ================================================= ************************/
 
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
-import { Button } from "@nextui-org/react";
-
-const ModalFooterButtons = ({ onClose }) => (
-	<ModalFooter className="flex justify-start px-10">
-		<Button color="primary" variant="light" onPress={onClose} className="hover:bg-white/25 text-white">
-			Source Code
-		</Button>
-		<Button onPress={onClose} className="dark:bg-dark-orange dark:hover:bg-dark-orange/75">
-			Live Demo
-		</Button>
-	</ModalFooter>
-);
-
-export default function Modals({ isOpen = false, onOpenChange, onClose, children }) {
-	return (
-		<Modal
-			hideCloseButton
-			isOpen={isOpen}
-			onOpenChange={(open) => {
-				if (!open) onClose(); // Close the modal if clicked outside
-			}}
-			placement="center"
-			scrollBehavior="inside"
-			className="mt-16 h-5/6 w-3/6 max-w-none"
-			classNames={{
-				body: "px-10",
-				backdrop: "bg-[#101825]/75 backdrop-opacity-40",
-				base: "border-[#292f46] bg-[#19172c] dark:bg-dark-blue text-[#a8b0d3]",
-				header: "border-b-[1px] border-[#292f46] text-dark-orange uppercase",
-				footer: "border-t-[1px] border-[#292f46]",
-			}}
-		>
-			<ModalContent>
-				{() => (
-					<>
-						<ModalHeader className="flex flex-col gap-1 font-main text-2xl ml-2">To-Do List</ModalHeader>
-						<ScrollShadow hideScrollBar>
-							<ModalBody className="font-sub">{children}</ModalBody>
-						</ScrollShadow>
-						<ModalFooterButtons onClose={onClose} />
-					</>
-				)}
-			</ModalContent>
-		</Modal>
-	);
-}
-
-//************************ ================================================= ************************/
-
 // import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
 // import { ScrollShadow } from "@nextui-org/scroll-shadow";
 // import { Button } from "@nextui-org/react";
 
-// export default function Modals({ isOpen = false, onOpenChange, onClose, headerContent, bodyContent, footerContent }) {
+// const ModalFooterButtons = ({ onClose }) => (
+// 	<ModalFooter className="flex justify-start px-10">
+// 		<Button color="primary" variant="light" onPress={onClose} className="hover:bg-white/25 text-white">
+// 			Source Code
+// 		</Button>
+// 		<Button onPress={onClose} className="dark:bg-dark-orange dark:hover:bg-dark-orange/75">
+// 			Live Demo
+// 		</Button>
+// 	</ModalFooter>
+// );
+
+// export default function Modals({ isOpen = false, onOpenChange, onClose, children }) {
 // 	return (
 // 		<Modal
 // 			hideCloseButton
@@ -136,14 +96,53 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, children
 // 			<ModalContent>
 // 				{() => (
 // 					<>
-// 						<ModalHeader className="flex flex-col gap-1 font-main text-2xl ml-2">{headerContent}</ModalHeader>
+// 						<ModalHeader className="flex flex-col gap-1 font-main text-2xl ml-2">To-Do List</ModalHeader>
 // 						<ScrollShadow hideScrollBar>
-// 							<ModalBody className="font-sub">{bodyContent}</ModalBody>
+// 							<ModalBody className="font-sub">{children}</ModalBody>
 // 						</ScrollShadow>
-// 						<ModalFooter className="flex justify-start px-10">{footerContent}</ModalFooter>
+// 						<ModalFooterButtons onClose={onClose} />
 // 					</>
 // 				)}
 // 			</ModalContent>
 // 		</Modal>
 // 	);
 // }
+
+//************************ ================================================= ************************/
+
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
+import { ScrollShadow } from "@nextui-org/scroll-shadow";
+
+export default function Modals({ isOpen = false, onOpenChange, onClose, headerContent, bodyContent, footerContent }) {
+	return (
+		<Modal
+			hideCloseButton
+			isOpen={isOpen}
+			onOpenChange={(open) => {
+				if (!open) onClose(); // Close the modal if clicked outside
+			}}
+			placement="center"
+			scrollBehavior="inside"
+			className="mt-16 h-5/6 w-3/6 max-w-none"
+			classNames={{
+				body: "px-10",
+				backdrop: "bg-[#101825]/75 backdrop-opacity-40",
+				base: "border-[#292f46] bg-[#19172c] dark:bg-dark-blue text-[#a8b0d3]",
+				header: "border-b-[1px] border-[#292f46] text-dark-orange uppercase",
+				footer: "border-t-[1px] border-[#292f46]",
+			}}
+		>
+			<ModalContent>
+				{() => (
+					<>
+						<ModalHeader className="flex flex-col gap-1 font-main text-2xl ml-2">{headerContent}</ModalHeader>
+						<ScrollShadow hideScrollBar>
+							<ModalBody className="font-sub">{bodyContent}</ModalBody>
+						</ScrollShadow>
+						<ModalFooter className="flex justify-start px-10">{footerContent}</ModalFooter>
+					</>
+				)}
+			</ModalContent>
+		</Modal>
+	);
+}
