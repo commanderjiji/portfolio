@@ -51,8 +51,32 @@ import BelleThumbnail from "../components/modalContents/belle/thumbnail.png";
 import BibleStudy, { header as Header5, bodyContent as bodyContent5 } from "../components/modalContents/biblestudy/BibleStudy";
 import BibleStudyThumbnail from "../components/modalContents/biblestudy/thumbnail.png";
 
+import Hive, { header as Header7, bodyContent as bodyContent7 } from "../components/modalContents/hive/Hive";
+import HiveThumbnail from "../components/modalContents/hive/thumbnail.png";
+
 import CapstonePoster, { header as Header6, bodyContent as bodyContent6 } from "../components/modalContents/capstoneposter/CapstonePoster";
 import CapstonePosterThumbnail from "../components/modalContents/capstoneposter/capstone.jpg";
+
+import NailPoster, { header as Header8, bodyContent as bodyContent8 } from "../components/modalContents/nailposter/NailPoster";
+import NailPosterThumbnail from "../components/modalContents/nailposter/nailposter.png";
+
+import JournPoster, { header as Header9, bodyContent as bodyContent9 } from "../components/modalContents/journposter/JournPoster";
+import JournPosterThumbnail from "../components/modalContents/journposter/journposter.png";
+
+import PromPoster, { header as Header10, bodyContent as bodyContent10 } from "../components/modalContents/promposter/PromPoster";
+import PromPosterThumbnail from "../components/modalContents/promposter/promposter.png";
+
+import Reels1, { header as Header11, bodyContent as bodyContent11 } from "../components/modalContents/reels1/Reels1";
+import Reels1Thumbnail from "../components/modalContents/reels1/poster.png";
+
+import Reel2, { header as Header12, bodyContent as bodyContent12 } from "../components/modalContents/reels2/Reels2";
+import Reel2Thumbnail from "../components/modalContents/reels2/poster.png";
+
+import Reel3, { header as Header13, bodyContent as bodyContent13 } from "../components/modalContents/reels3/Reels3";
+import Reel3Thumbnail from "../components/modalContents/reels3/poster.png";
+
+import Reel4, { header as Header14, bodyContent as bodyContent14 } from "../components/modalContents/reels4/Reels4";
+import Reel4Thumbnail from "../components/modalContents/reels4/poster.jpg";
 
 // import "flowbite";
 import { Carousel } from "flowbite-react";
@@ -351,6 +375,18 @@ export default function Home() {
 												</CardHeader>
 											</Card>
 										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header7, <Hive />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center py-2">
+													<Image alt="Card background" className="object-cover size-fit  w-full" src={HiveThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header7}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent7}</small>
+												</CardHeader>
+											</Card>
+										</li>
 									</ol>
 								</ScrollShadow>
 							</Tab>
@@ -379,6 +415,42 @@ export default function Home() {
 												</CardHeader>
 											</Card>
 										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header8, <NailPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={NailPosterThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header8}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent8}</small>
+												</CardHeader>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header9, <JournPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={JournPosterThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header9}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent9}</small>
+												</CardHeader>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header10, <PromPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={PromPosterThumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header10}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent10}</small>
+												</CardHeader>
+											</Card>
+										</li>
 									</ol>
 								</ScrollShadow>
 							</Tab>
@@ -397,26 +469,50 @@ export default function Home() {
 								>
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
+											<Card isPressable onPress={() => handleModalOpen(Header11, <Reels1 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5  ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={Reels1Thumbnail} width={500} height={500} />
 												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header3}</h4>
-													<small className="text-default-500 line-clamp-4 ">{bodyContent3}</small>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header11}</h4>
+													<small className="text-default-500 line-clamp-4 h-20">{bodyContent11}</small>
 												</CardHeader>
+											</Card>
+										</li>
 
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
-															Source Code
-														</Link>
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header12, <Reel2 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 h-72">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel2Thumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header12}</h4>
+													<small className="text-default-500 line-clamp-4 h-20">{bodyContent12}</small>
+												</CardHeader>
+											</Card>
+										</li>
 
-														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
-															Live Demo
-														</Link>
-													</CardFooter>
-												</div>
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header13, <Reel3 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel3Thumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header13}</h4>
+													<small className="text-default-500 line-clamp-4 h-20">{bodyContent13}</small>
+												</CardHeader>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(Header14, <Reel4 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+												<CardBody className="flex flex-col items-center mt-5 ">
+													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel4Thumbnail} width={500} height={500} />
+												</CardBody>
+												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
+													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header14}</h4>
+													<small className="text-default-500 line-clamp-4">{bodyContent14}</small>
+												</CardHeader>
 											</Card>
 										</li>
 									</ol>
@@ -444,7 +540,7 @@ export default function Home() {
 							</div>
 							<div className="mb-5  ">
 								<h4 className="text-5xl tracking-tighter text-gray-800 dark:text-gray-200  font-main font-black uppercase ">Jerome Almoguera</h4>
-								<p className="text-md  text-gray-800 dark:text-gray-200  font-sub">Aspiring Front-End Developer • Front-end Developer</p>
+								<p className="text-md  text-gray-800 dark:text-gray-200  font-sub">Aspiring Front-End Developer • Graphic Designer</p>
 							</div>
 							<p className="text-md py-2 pr-10 text-gray-800 dark:text-gray-200 font-sub ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
 						</div>
