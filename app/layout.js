@@ -39,7 +39,7 @@ const metadata = {
 export default function RootLayout({ children }) {
 	// const [darkMode, setDarkMode] = useState(false);
 
-	const resume = "/resume.pdf";
+	const resume = "/Jerome_Almoguera.pdf";
 
 	const [visible, setVisible] = useState(false);
 
