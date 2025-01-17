@@ -78,6 +78,9 @@ import Reel3Thumbnail from "../components/modalContents/reels3/poster.png";
 import Reel4, { header as Header14, bodyContent as bodyContent14 } from "../components/modalContents/reels4/Reels4";
 import Reel4Thumbnail from "../components/modalContents/reels4/poster.jpg";
 
+import Gradientdiv from "../components/Gradientdiv";
+import { motion } from "motion/react";
+
 // import "flowbite";
 import { Carousel } from "flowbite-react";
 
@@ -138,14 +141,14 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className=" px-10 dark:bg-dark-blue ">
+			<Gradientdiv className=" px-10 bg-dark-blue ">
 				<section className="min-h-screen mb-20">
 					<div className="h-screen flex flex-col justify-center p-10">
 						<div className="text-left ">
 							<h2 className=" text-9xl py-2 font-main dark:text-white  tracking-tighter ">JEROME</h2>
 							<h2 className=" text-9xl py-2 font-main -mt-11 dark:text-white tracking-tighter ">ALMOGUERA</h2>
 						</div>
-						<h3 className="font-sub text-2xl py-2 text-left dark:text-white">Aspiring Front-End Developer · Graphic Designer</h3>
+						<h5 className=" text-2xl py-2 text-left dark:text-white">Aspiring Front-End Developer · Graphic Designer</h5>
 						<div className="flex justify-start space-x-5">
 							<a href="mailto:jeromealmoguera@gmail.com" target="_blank" className="text-dark-blue dark:text-white/75 hover:dark:text-white hover:text-slate-700">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
@@ -204,37 +207,37 @@ export default function Home() {
 					</div>
 
 					<div className=" lg:flex gap-5 pl-8">
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={html} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={css} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={js} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={tailwind} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={bootstrap} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={react} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={php} width={60} height={60} />
-						</div>
+						</motion.div>
 
-						<div className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block" alt="Image" src={laravel} width={60} height={60} />
-						</div>
+						</motion.div>
 					</div>
 				</section>
 
@@ -271,7 +274,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-full " src={ModalThumbnail} width={2000} height={2000} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header1}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header1}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 ">{bodyContent1}</small>
 												</CardHeader>
 
@@ -294,7 +299,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-max " src={PigGameThumbnail} width={2000} height={2000} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header2}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header2}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 ">{bodyContent2}</small>
 												</CardHeader>
 
@@ -318,7 +325,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
 												</CardBody>
 												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center ">{Header3}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center ">
+														{Header3}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 ">{bodyContent3}</small>
 												</CardHeader>
 
@@ -358,7 +367,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={BelleThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header4}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header4}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent4}</small>
 												</CardHeader>
 											</Card>
@@ -370,7 +381,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={BibleStudyThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header5}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header5}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent5}</small>
 												</CardHeader>
 											</Card>
@@ -382,7 +395,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={HiveThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header7}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header7}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent7}</small>
 												</CardHeader>
 											</Card>
@@ -410,7 +425,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={CapstonePosterThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header6}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header6}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent6}</small>
 												</CardHeader>
 											</Card>
@@ -422,7 +439,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={NailPosterThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header8}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header8}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent8}</small>
 												</CardHeader>
 											</Card>
@@ -434,7 +453,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={JournPosterThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header9}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header9}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent9}</small>
 												</CardHeader>
 											</Card>
@@ -446,7 +467,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={PromPosterThumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header10}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header10}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent10}</small>
 												</CardHeader>
 											</Card>
@@ -474,7 +497,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reels1Thumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header11}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header11}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 h-20">{bodyContent11}</small>
 												</CardHeader>
 											</Card>
@@ -486,7 +511,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel2Thumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header12}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header12}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 h-20">{bodyContent12}</small>
 												</CardHeader>
 											</Card>
@@ -498,7 +525,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel3Thumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header13}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header13}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4 h-20">{bodyContent13}</small>
 												</CardHeader>
 											</Card>
@@ -510,7 +539,9 @@ export default function Home() {
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel4Thumbnail} width={500} height={500} />
 												</CardBody>
 												<CardHeader className="pt-2 px-4 flex flex-col items-center rounded">
-													<h4 className="mb-2 font-bold text-large truncate w-full text-center">{Header14}</h4>
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center">
+														{Header14}
+													</motion.h4>
 													<small className="text-default-500 line-clamp-4">{bodyContent14}</small>
 												</CardHeader>
 											</Card>
@@ -540,9 +571,9 @@ export default function Home() {
 							</div>
 							<div className="mb-5  ">
 								<h4 className="text-5xl tracking-tighter text-gray-800 dark:text-gray-200  font-main font-black uppercase ">Jerome Almoguera</h4>
-								<p className="text-md  text-gray-800 dark:text-gray-200  font-sub">Aspiring Front-End Developer • Graphic Designer</p>
+								<p className="text-md  text-gray-800 dark:text-gray-200  ">Aspiring Front-End Developer • Graphic Designer</p>
 							</div>
-							<p className="text-md py-2 pr-10 text-gray-800 dark:text-gray-200 font-sub ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
+							<p className="text-md py-2 pr-10 text-gray-800 dark:text-gray-200  ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
 						</div>
 
 						{/* WORK EXPERIENCE */}
@@ -551,10 +582,10 @@ export default function Home() {
 							<ol className="group h-custom-30   ">
 								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
 									<div className=" flex">
-										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75 ">September 2023 — JULY 2024</header>
+										<header className="flex-2 w-52  text-xs font-medium uppercase pt-1 text-white/75 ">September 2023 — JULY 2024</header>
 										<div className="flex-1">
-											<h5 className="font-sub text-md font-semibold mb-3 ">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">
+											<h5 className=" text-md font-semibold mb-3 ">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
+											<p className=" text-sm text-white/75">
 												<ul>
 													<li className="mb-2">• Install, configure, and maintain computer hardware components, peripherals, and software applications.</li>
 													<li className="mb-2">• Diagnose and resolve hardware and software issues, including troubleshooting and providing technical support to end‑users.</li>
@@ -568,25 +599,10 @@ export default function Home() {
 
 								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
 									<div className=" flex">
-										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
+										<header className="flex-2 w-52  text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
 										<div className="flex-1">
-											<h5 className="font-sub text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">
-												<ul>
-													<li className="mb-2">• Collaborated in Agile development environments, participating in daily stand‑ups, sprint planning, demonstrations, and code reviews to deliver high‑quality code within project timelines.</li>
-													<li className="mb-2">• Translated design mock‑ups into pixel‑perfect, standards‑compliant HTML, CSS, and JavaScript code using Figma.</li>
-													<li className="mb-2">• Built and maintained reusable code libraries, frameworks (UI Kit), and components to streamline development processes and improve efficiency.</li>
-												</ul>
-											</p>
-										</div>
-									</div>
-								</li>
-								<li className="group dark:text-white dark:hover:text-orange-400 hover:bg-slate-800/50 hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
-									<div className=" flex">
-										<header className="flex-2 w-52 font-sub text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
-										<div className="flex-1">
-											<h5 className="font-sub text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
-											<p className="font-sub text-sm text-white/75">
+											<h5 className=" text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
+											<p className=" text-sm text-white/75">
 												<ul>
 													<li className="mb-2">• Collaborated in Agile development environments, participating in daily stand‑ups, sprint planning, demonstrations, and code reviews to deliver high‑quality code within project timelines.</li>
 													<li className="mb-2">• Translated design mock‑ups into pixel‑perfect, standards‑compliant HTML, CSS, and JavaScript code using Figma.</li>
@@ -720,7 +736,7 @@ export default function Home() {
 								</svg>
 							</a>
 						</div>
-						<p className="font-sub font-extralight text-xs text-center text-dark-blue dark:text-white/75 ">
+						<p className=" font-extralight text-xs text-center text-dark-blue dark:text-white/75 ">
 							{`© ${year} | Design & Developed by `}
 							<a href="https://www.linkedin.com/in/jeromealmoguera/" target="_blank" title="Connect with Jerome Almoguera on LinkedIn" className="underline  underline-offset-1 hover:dark:text-white">
 								Jerome Almoguera
@@ -728,7 +744,7 @@ export default function Home() {
 						</p>
 					</div>
 				</section>
-			</main>
+			</Gradientdiv>
 		</div>
 	);
 }

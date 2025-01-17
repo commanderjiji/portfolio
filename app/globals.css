@@ -41,13 +41,16 @@ body {
 }
 
 .btn-modalOut-live {
-	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs rounded-full px-3 py-2
+	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs rounded-full px-3 py-2;
 }
 
 .code-highlight {
 	@apply bg-orange-200/20 rounded p-0.5 text-orange-400;
 }
 
-button {
+button,
+p,
+h5,
+header {
 	@apply font-sub;
 }
