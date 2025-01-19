@@ -17,9 +17,18 @@ body {
 }
 
 @font-face {
-	font-family: "nexa";
-	src: url("../public/Nexa-Heavy.ttf");
-	/* src: url("../public/Nexa-ExtraLight.ttf"); */
+	font-family: "Nexa";
+	src: url("/Nexa-Heavy.ttf");
+}
+
+@font-face {
+	font-family: "Nexa Light";
+	src: url("/Nexa-ExtraLight.ttf");
+}
+
+@font-face {
+	font-family: "Manrope";
+	src: url("/Manrope-Regular.ttf");
 }
 
 .no-radius-tabs {
@@ -52,5 +61,5 @@ button,
 p,
 h5,
 header {
-	@apply font-sub;
+	font-family: "Manrope";
 }
