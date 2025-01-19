@@ -17,8 +17,20 @@ body {
 }
 
 @font-face {
-	font-family: "nexa";
-	src: url("../public/Nexa-Heavy.ttf");
+	font-family: "Nexa";
+	src: url("/Nexa-Heavy.ttf");
+	/* src: url("../public/Nexa-ExtraLight.ttf"); */
+}
+
+@font-face {
+	font-family: "Nexa Light";
+	src: url("/Nexa-ExtraLight.ttf");
+	/* src: url("../public/Nexa-ExtraLight.ttf"); */
+}
+
+@font-face {
+	font-family: "Manrope";
+	src: url("/Manrope-Regular.ttf");
 	/* src: url("../public/Nexa-ExtraLight.ttf"); */
 }
 
