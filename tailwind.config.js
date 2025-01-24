@@ -49,5 +49,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [nextui(), require("flowbite/plugin"), require("tailwindcss-animate")],
+	plugins: [nextui(), require("flowbite/plugin")],
 };
