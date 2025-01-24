@@ -18,7 +18,7 @@ export const ModalCarousel = () => (
 );
 
 //* Body */
-export const bodyContent = <p className="mb-8">Our capstone poster during our fourth year of college.</p>;
+export const bodyContent = <p className="mb-8">Our capstone poster during our fourth year of college. </p>;
 
 //* Footer */
 export const FooterContent = () => (
@@ -37,12 +37,8 @@ export const FooterContent = () => (
 export default function CapstonePoster() {
 	return (
 		<div>
-			{/* <ModalCarousel /> */}
-			{/* object-cover size-fit h-max */}
-			<div className="justify-items-center my-5">
-				<div className="w-custom-modal ">
-					<Image alt="" className="mb-10" src={poster} width={1000} height={1000} />
-				</div>
+			<div className="lg:w-custom-modal justify-items-center my-5 ">
+				<Image alt="" className="mb-10" src={poster} width={1000} height={1000} />
 			</div>
 			{bodyContent}
 		</div>

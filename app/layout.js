@@ -62,8 +62,8 @@ export default function RootLayout({ children }) {
 					<Navbar className="dark:bg-slate-800/50 ">
 						<NavbarContent>
 							<NavbarBrand>
-								<a href="./">
-									<h1 className="text-xl font-main uppercase dark:text-white">Jerome Almoguera</h1>
+								<a href="/">
+									<h1 className="text-sm sm:text-xl lg:text-xl font-main uppercase dark:text-white">Jerome Almoguera</h1>
 								</a>
 							</NavbarBrand>
 						</NavbarContent>
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
 						<NavbarContent justify="end">
 							<NavbarItem className="hidden lg:flex">{/* <ThemeSwitcher /> Dark mode button */}</NavbarItem>
 							<NavbarItem>
-								<Button color="warning" variant="flat" onPress={onOpen}>
+								<Button className="text-xs sm:text-md" color="warning" variant="flat" onPress={onOpen}>
 									Resume
 								</Button>
 								<Modal hideCloseButton isOpen={isOpen} onOpenChange={onOpenChange} placement="center" className="bg-slate-800  h-custom-32">

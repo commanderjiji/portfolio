@@ -42,7 +42,7 @@ export default function Reels1() {
 	return (
 		<div>
 			<div className="flex justify-center mb-5">
-				<InstagramEmbed url="https://www.instagram.com/reel/CrdNk7wp1V7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" width={328} />
+				<InstagramEmbed url="https://www.instagram.com/reel/CrdNk7wp1V7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" className="w-full" />
 			</div>
 			{bodyContent}
 		</div>

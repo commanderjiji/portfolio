@@ -39,8 +39,8 @@ export const bodyContent = (
 
 //* Footer */
 export const FooterContent = () => (
-	<div className="flex justify-start gap-2">
-		<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/modal-window" target="_blank" className="btn-modal-source">
+	<div className="flex justify-start gap-2 ">
+		<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/modal-window" target="_blank" className="btn-modal-source ">
 			Source Code
 		</Link>
 
