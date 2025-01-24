@@ -12,7 +12,7 @@ export const ModalCarousel = () => (
 	<div className=" h-64 sm:h-96 mb-5">
 		<Carousel>
 			{[image1, image2].map((src, index) => (
-				<Image key={index} src={src} alt={`Image ${index + 1}`} className="w-full h-full object-cover" width={2000} height={2000} />
+				<Image key={index} src={src} alt={`Image ${index + 1}`} className="w-full h-full object-cover" width={1000} height={1000} />
 			))}
 		</Carousel>
 	</div>
@@ -47,17 +47,14 @@ export const FooterContent = () => (
 // components/modalWindowContent.js
 export default function Belle() {
 	return (
-		<div>
-			{/* <ModalCarousel /> */}
-			{/* object-cover size-fit h-max */}
-			<div className="justify-items-center mb-5">
-				<div className="w-custom-modal ">
-					<h1 className="text-center text-dark-orange font-bold text-xl py-5">Full Preview</h1>
-					<Image alt="" className="mb-10" src={image1} width={1000} height={1000} />
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Revised Hero Section</h2>
-					<Image alt="" className="mb-10" src={image2} width={1000} height={1000} />
-				</div>
+		<div className="">
+			<div className="lg:w-custom-modal justify-items-center mb-5 ">
+				<h1 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Full Preview</h1>
+				<Image alt="" className="mb-10 w-full" src={image1} width={1000} height={1000} />
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Revised Hero Section</h2>
+				<Image alt="" className="mb-10 w-full" src={image2} width={1000} height={1000} />
 			</div>
+
 			{bodyContent}
 		</div>
 	);

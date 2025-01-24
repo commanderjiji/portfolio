@@ -113,7 +113,6 @@
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
 
-
 export default function Modals({ isOpen = false, onOpenChange, onClose, headerContent, bodyContent, footerContent }) {
 	return (
 		<Modal
@@ -124,7 +123,7 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, headerCo
 			}}
 			placement="center"
 			scrollBehavior="inside"
-			className="mt-16 h-5/6 w-3/6 max-w-none"
+			className="mt-16 h-max w-sm lg:w-3/6"
 			classNames={{
 				body: "px-10",
 				backdrop: "bg-[#101825]/75 backdrop-opacity-40",
@@ -136,13 +135,11 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, headerCo
 			<ModalContent>
 				{() => (
 					<>
-						<ModalHeader  className="flex flex-col gap-1 font-main text-2xl ml-2">
-							{headerContent}
-						</ModalHeader>
+						<ModalHeader className="flex flex-col gap-1 font-main text-xl lg:text-2xl ml-2">{headerContent}</ModalHeader>
 						<ScrollShadow hideScrollBar>
-							<ModalBody className="font-sub">{bodyContent}</ModalBody>
+							<ModalBody className="font-sub text-sm">{bodyContent}</ModalBody>
 						</ScrollShadow>
-						<ModalFooter className="flex justify-start px-10">{footerContent}</ModalFooter>
+						<ModalFooter className="flex justify-start px-10 ">{footerContent}</ModalFooter>
 					</>
 				)}
 			</ModalContent>

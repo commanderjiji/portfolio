@@ -43,20 +43,20 @@ export default function Hive() {
 		<div>
 			{/* <ModalCarousel /> */}
 			{/* object-cover size-fit h-max */}
-			<div className="justify-items-center my-5">
-				<div className="w-custom-modal ">
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Log In Page</h2>
-					<Image alt="" className="mb-10" src={loginImg} width={1000} height={1000} />
 
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Landing Page</h2>
-					<Image alt="" className="mb-10" src={landingImg} width={1000} height={1000} />
+			<div className="lg:w-custom-modal justify-items-center my-5">
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Log In Page</h2>
+				<Image alt="" className="mb-10" src={loginImg} width={1000} height={1000} />
 
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Forgot Password Page</h2>
-					<Image alt="" className="mb-5" src={forgotPassImg} width={1000} height={1000} />
-					<Image alt="" className="mb-5" src={forgotPassImg2} width={1000} height={1000} />
-					<Image alt="" className="mb-10" src={forgotPassImg3} width={1000} height={1000} />
-				</div>
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Landing Page</h2>
+				<Image alt="" className="mb-10" src={landingImg} width={1000} height={1000} />
+
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Forgot Password Page</h2>
+				<Image alt="" className="mb-5" src={forgotPassImg} width={1000} height={1000} />
+				<Image alt="" className="mb-5" src={forgotPassImg2} width={1000} height={1000} />
+				<Image alt="" className="mb-10" src={forgotPassImg3} width={1000} height={1000} />
 			</div>
+
 			{bodyContent}
 		</div>
 	);

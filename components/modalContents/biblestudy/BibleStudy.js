@@ -42,21 +42,21 @@ export default function BibleStudy() {
 		<div>
 			{/* <ModalCarousel /> */}
 			{/* object-cover size-fit h-max */}
-			<div className="justify-items-center mb-5">
-				<div className="w-custom-modal ">
-					<h1 className="text-center text-dark-orange font-bold text-xl py-5">Full Preview</h1>
-					<Image alt="" className="mb-10" src={home} width={1000} height={1000} />
 
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Landing Page</h2>
-					<Image alt="" className="mb-10" src={homepage} width={1000} height={1000} />
+			<div className="lg:w-custom-modal justify-items-center mb-5 ">
+				<h1 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Full Preview</h1>
+				<Image alt="" className="mb-10 w-full" src={home} width={1000} height={1000} />
 
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Log In Page</h2>
-					<Image alt="" className="mb-10" src={login} width={1000} height={1000} />
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Landing Page</h2>
+				<Image alt="" className="mb-10 w-full" src={homepage} width={1000} height={1000} />
 
-					<h2 className="text-center text-dark-orange font-bold text-xl py-5">Registration Page</h2>
-					<Image alt="" className="mb-10" src={registration} width={1000} height={1000} />
-				</div>
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Log In Page</h2>
+				<Image alt="" className="mb-10 w-full" src={login} width={1000} height={1000} />
+
+				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Registration Page</h2>
+				<Image alt="" className="mb-10 w-full" src={registration} width={1000} height={1000} />
 			</div>
+
 			{bodyContent}
 		</div>
 	);
