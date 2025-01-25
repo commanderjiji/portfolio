@@ -123,7 +123,7 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, headerCo
 			}}
 			placement="center"
 			scrollBehavior="inside"
-			className="mt-16 h-max w-sm lg:w-3/6"
+			className="mt-16 h-auto max-h-[75vh] w-5/6 lg:w-3/6"
 			classNames={{
 				body: "px-10",
 				backdrop: "bg-[#101825]/75 backdrop-opacity-40",
@@ -137,7 +137,7 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, headerCo
 					<>
 						<ModalHeader className="flex flex-col gap-1 font-main text-xl lg:text-2xl ml-2">{headerContent}</ModalHeader>
 						<ScrollShadow hideScrollBar>
-							<ModalBody className="font-sub text-sm">{bodyContent}</ModalBody>
+							<ModalBody className="font-sub text-sm flex-1  ">{bodyContent}</ModalBody>
 						</ScrollShadow>
 						<ModalFooter className="flex justify-start px-10 ">{footerContent}</ModalFooter>
 					</>

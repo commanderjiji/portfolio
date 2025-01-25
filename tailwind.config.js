@@ -6,6 +6,8 @@ module.exports = {
 		//react-pdf
 		config.resolve.alias.canvas = false;
 
+		config.cache = false;
+
 		return config;
 	},
 	experimental: {
@@ -49,5 +51,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [nextui(), require("flowbite/plugin")],
+	plugins: [nextui(), require("flowbite/plugin"), require("tailwindcss-animate")],
 };
