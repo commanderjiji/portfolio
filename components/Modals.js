@@ -123,7 +123,7 @@ export default function Modals({ isOpen = false, onOpenChange, onClose, headerCo
 			}}
 			placement="center"
 			scrollBehavior="inside"
-			className="mt-16 h-auto max-h-[75vh] w-5/6 lg:w-3/6"
+			className="mt-16 h-auto max-h-[80vh] w-5/6  max-w-none lg:w-3/6"
 			classNames={{
 				body: "px-10",
 				backdrop: "bg-[#101825]/75 backdrop-opacity-40",

@@ -89,8 +89,6 @@ export default function Home() {
 
 	// const [isVertical, setIsVertical] = React.useState(true);
 
-	const menuItems = ["Profile", "Dashboard", "Activity", "Analytics", "System", "Deployments", "My Settings", "Team Settings", "Help & Feedback", "Log Out"];
-
 	const [year, setYear] = useState(new Date().getFullYear());
 
 	useEffect(() => {
@@ -158,12 +156,12 @@ export default function Home() {
 			<Gradientdiv className=" px-5 lg:px-10 bg-dark-blue ">
 				<section className="min-h-screen mb-20 bg-sky-700">
 					<div className="h-screen flex flex-col justify-center lg:p-10">
-						<div className="text-center ">
-							<h2 className="  py-2 font-main dark:text-white  tracking-tighter text-5xl sm:text-7xl lg:text-9xl">JEROME</h2>
-							<h2 className="  py-2 font-main -mt-6 lg:-mt-11 dark:text-white tracking-tighter text-5xl sm:text-7xl lg:text-9xl">ALMOGUERA</h2>
+						<div className="text-center md:text-left">
+							<h2 className="  py-2 font-main dark:text-white  tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-9xl">JEROME</h2>
+							<h2 className="  py-2 font-main -mt-6 md:-mt-9 lg:-mt-11 dark:text-white tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-9xl">ALMOGUERA</h2>
 						</div>
-						<h5 className=" text-xs sm:text-lg text-center lg:text-2xl py-2 dark:text-white">Aspiring Front-End Developer · Graphic Designer</h5>
-						<div className="flex justify-center lg:justify-start space-x-3">
+						<h5 className=" text-xs sm:text-lg text-center lg:text-2xl md:text-left py-2 dark:text-white">Aspiring Front-End Developer · Graphic Designer</h5>
+						<div className="flex justify-center md:justify-start space-x-3">
 							<a href="mailto:jeromealmoguera@gmail.com" target="_blank" className="text-dark-blue dark:text-white/75 hover:dark:text-white hover:text-slate-700">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
 									<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
@@ -217,7 +215,7 @@ export default function Home() {
 				{/* SKILLS */}
 				<section className="mb-20 ">
 					<div>
-						<h3 className=" text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black lg:ml-8 dark:text-white">SKILLS</h3>
+						<h3 className=" text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">SKILLS</h3>
 					</div>
 
 					<div className=" w-full flex flex-wrap bg-orange-500 ">
@@ -256,8 +254,8 @@ export default function Home() {
 				</section>
 
 				{/*  PORTFOLIO */}
-				<h3 className=" text-4xl md:text-5xl lg:text-6xl lg:ml-8 font-main relative dark:text-white">PROJECTS</h3>
-				<section className=" mb-20 h-full sm:-mt-16">
+				<h3 className=" text-4xl md:text-5xl lg:text-6xl md:ml-4 lg:ml-8 font-main relative dark:text-white">PROJECTS</h3>
+				<section className=" mb-20 h-full ">
 					{/* TABS */}
 					<ScrollShadow
 						className="sm:flex sm:flex-row h-full overflow-auto w-full bg-blue-500 [&::-webkit-scrollbar]:h-2
@@ -272,13 +270,13 @@ export default function Home() {
 							radius={"none"}
 							aria-label="Options"
 							isVertical={isVertical}
-							className="flex my-auto  m-5 sm:pt-16 "
+							className="flex my-auto m-5 md:items-center md:mr-5  "
 							classNames={{
 								tabContent: "group-data-[selected=true]:text-dark-orange",
 							}}
 						>
 							{/* TAB Website  */}
-							<Tab className="text-xs" title="Website">
+							<Tab className="text-xs md:text-md" title="Website">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
@@ -440,7 +438,7 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB WEB DESIGN  */}
-							<Tab className="text-xs" title="Web Design">
+							<Tab className="text-xs md:text-md" title="Web Design">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
@@ -489,7 +487,7 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB POSTER  */}
-							<Tab className="text-xs" title="Poster">
+							<Tab className="text-xs md:text-md" title="Poster">
 								<div className="flex h-full items-center px-6 mb-5  w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
@@ -552,7 +550,7 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB REELS  */}
-							<Tab className="text-xs" title="Reels">
+							<Tab className="text-xs md:text-md" title="Reels">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
@@ -626,19 +624,19 @@ export default function Home() {
 				</section>
 
 				{/* ABOU ME */}
-				<section className="mb-20 h-full lg:h-modalH">
-					<h3 className="text-4xl lg:text-6xl py-1 font-main font-black lg:ml-8 dark:text-white">ABOUT ME</h3>
-					<div className="lg:flex  ">
-						<div className="flex flex-col items-center text-center justify-center p-5 lg:pl-8">
+				<section className="mb-20 h-full lg:h-modalH bg-cyan-600">
+					<h3 className="text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">ABOUT ME</h3>
+					<div className="md:flex">
+						<div className="flex flex-col items-center text-center justify-center md:items-start md:text-left p-5 lg:pl-8">
 							<div className="mb-5 lg:my-8">
 								<Image alt="Content" src={web6} width={400} height={400} className="w-40 h-40 rounded-full object-cover size-min " />
 							</div>
-							<div className="mb-5  ">
+							<div className="mb-5">
 								<h4 className="text-4xl lg:text-5xl tracking-tighter text-gray-800 dark:text-gray-200  font-main font-black uppercase ">Jerome Almoguera</h4>
 								<p className="text-xs sm:text-sm lg:text-md  text-gray-800 dark:text-gray-200  ">Aspiring Front-End Developer • Graphic Designer</p>
 							</div>
 
-							<p className="text-sm lg:text-md  text-center py-2 lg:pr-10 text-gray-800 dark:text-gray-200  ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
+							<p className="text-sm lg:text-md py-2 lg:pr-10 text-gray-800 dark:text-gray-200  ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
 						</div>
 
 						{/* WORK EXPERIENCE */}
@@ -684,10 +682,10 @@ export default function Home() {
 
 				{/* ========================== CONTACT ========================== */}
 				<section className=" mb-20 bg-purple-600">
-					<h3 className="text-4xl lg:text-6xl py-1 font-main font-black lg:ml-8 dark:text-white">CONTACT</h3>
+					<h3 className="text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">CONTACT</h3>
 					<div className=" container my-5 pl-8 ">
 						<section>
-							<p className="text-sm sm:text-md mb-12 lg:w-3/5 dark:text-white">I’m excited to connect! Whether it’s for project discussions, collaboration opportunities, or any inquiries, don’t hesitate to reach out—I’d be glad to help!</p>
+							<p className="text-sm sm:text-md lg:text-lg mb-12 lg:w-3/5 dark:text-white">I’m excited to connect! Whether it’s for project discussions, collaboration opportunities, or any inquiries, don’t hesitate to reach out—I’d be glad to help!</p>
 
 							<div className="flex flex-wrap ">
 								<div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
@@ -765,8 +763,8 @@ export default function Home() {
 
 				<section className="border-y mb-5 lg:mb-12">
 					<div className="justify-items-center h-screen content-center">
-						<h1 className="font-main text-7xl sm:text-[110px] lg:text-10xl tracking-tighter leading-none dark:text-white ">THANKS</h1>
-						<p className="font-mainLight text-sm sm:text-xl  lg:text-5xl tracking-widest pl-5 sm:pl-7 lg:pl-12 dark:text-white ">FOR VISITING</p>
+						<h1 className="font-main text-7xl sm:text-[110px] md:text-[150px]  lg:text-10xl tracking-tighter leading-none dark:text-white ">THANKS</h1>
+						<p className="font-mainLight text-sm sm:text-xl md:text-3xl lg:text-5xl tracking-widest pl-5 sm:pl-7 lg:pl-12 dark:text-white ">FOR VISITING</p>
 					</div>
 				</section>
 
