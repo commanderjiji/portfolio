@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import "flowbite"; */
+/* @import "tailwindcss"; */
+
+/* @import "flowbrte"; */
 
 /* @layer utilities {
 	.text-balance {
@@ -36,11 +38,11 @@ body {
 /* hover:bg-white/25 font-sub text-sm rounded-md px-4 py-3 */
 
 .btn-modal-source {
-	@apply hover:bg-white/25 font-sub text-xs lg:text-sm rounded-md px-4 py-3;
+	@apply hover:bg-white/25 font-sub text-xs md:text-sm rounded-md px-3 py-2 md:px-4 md:py-3;
 }
 
 .btn-modal-live {
-	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs lg:text-sm rounded-md px-4 py-3;
+	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs md:text-sm rounded-md px-3 py-2 md:px-4 md:py-3;
 }
 
 .btn-modalOut-source {
@@ -51,8 +53,16 @@ body {
 	@apply dark:bg-dark-orange dark:hover:bg-orange-hover font-sub text-xs rounded-full px-3 py-2;
 }
 
+.modalOut-body {
+	@apply sm:text-xs;
+}
+
 .code-highlight {
 	@apply bg-orange-200/20 rounded p-0.5 text-orange-400;
+}
+
+.text-footer {
+	@apply text-[10px] md:text-xs;
 }
 
 button,

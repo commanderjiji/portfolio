@@ -37,8 +37,10 @@ export const FooterContent = () => (
 export default function CapstonePoster() {
 	return (
 		<div>
-			<div className="lg:w-custom-modal justify-items-center my-5 ">
-				<Image alt="" className="mb-10" src={poster} width={1000} height={1000} />
+			<div className="flex flex-col items-center">
+				<div className="lg:w-custom-modal justify-items-center my-5 ">
+					<Image alt="" className="mb-10" src={poster} width={1000} height={1000} />
+				</div>
 			</div>
 			{bodyContent}
 		</div>

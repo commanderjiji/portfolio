@@ -40,7 +40,7 @@ export const FooterContent = () => (
 // components/modalWindowContent.js
 export default function Hive() {
 	return (
-		<div>
+		<div className="flex flex-col items-center">
 			{/* <ModalCarousel /> */}
 			{/* object-cover size-fit h-max */}
 

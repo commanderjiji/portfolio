@@ -6,6 +6,8 @@ module.exports = {
 		//react-pdf
 		config.resolve.alias.canvas = false;
 
+		config.cache = false;
+
 		return config;
 	},
 	experimental: {
