@@ -47,8 +47,8 @@ export const FooterContent = () => (
 // components/modalWindowContent.js
 export default function Belle() {
 	return (
-		<div className="">
-			<div className="lg:w-custom-modal justify-items-center mb-5 ">
+		<div className="flex flex-col items-center ">
+			<div className="lg:w-custom-modal  mb-5 ">
 				<h1 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Full Preview</h1>
 				<Image alt="" className="mb-10 w-full" src={image1} width={1000} height={1000} />
 				<h2 className="text-center text-dark-orange font-bold text-lg lg:text-xl py-5">Revised Hero Section</h2>

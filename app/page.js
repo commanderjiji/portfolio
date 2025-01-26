@@ -154,7 +154,7 @@ export default function Home() {
 			</Head>
 
 			<Gradientdiv className=" px-5 lg:px-10 bg-dark-blue ">
-				<section className="min-h-screen mb-20 bg-sky-700">
+				<section className="min-h-screen mb-20 ">
 					<div className="h-screen flex flex-col justify-center lg:p-10">
 						<div className="text-center md:text-left">
 							<h2 className="  py-2 font-main dark:text-white  tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-9xl">JEROME</h2>
@@ -218,7 +218,7 @@ export default function Home() {
 						<h3 className=" text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">SKILLS</h3>
 					</div>
 
-					<div className=" w-full flex flex-wrap bg-orange-500 ">
+					<div className=" w-full flex flex-wrap  ">
 						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className=" relative text-center shadow-sm hover:shadow-lg dark:hover:bg-dark-blueLight p-5 rounded-md my-10 ">
 							<Image className="inline-block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:h-16 lg:w-16" alt="Image" src={html} />
 						</motion.div>
@@ -258,7 +258,7 @@ export default function Home() {
 				<section className=" mb-20 h-full ">
 					{/* TABS */}
 					<ScrollShadow
-						className="sm:flex sm:flex-row h-full overflow-auto w-full bg-blue-500 [&::-webkit-scrollbar]:h-2
+						className="sm:flex sm:flex-row h-full overflow-auto w-full [&::-webkit-scrollbar]:h-2
   [&::-webkit-scrollbar-track]:rounded-full
   [&::-webkit-scrollbar-track]:bg-transparent
   [&::-webkit-scrollbar-thumb]:rounded-full
@@ -276,11 +276,11 @@ export default function Home() {
 							}}
 						>
 							{/* TAB Website  */}
-							<Tab className="text-xs md:text-md" title="Website">
+							<Tab className="text-xs md:text-sm" title="Website">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalWindowContent />, <FooterContent1 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+											<Card isPressable onPress={() => handleModalOpen(Header1, <ModalWindowContent />, <FooterContent1 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
 													<Image alt="Card background" className="object-cover size-full " src={ModalThumbnail} width={2000} height={2000} />
 												</CardBody>
@@ -305,7 +305,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header2, <PigGameContent />, <FooterContent2 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+											<Card isPressable onPress={() => handleModalOpen(Header2, <PigGameContent />, <FooterContent2 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
 													<Image alt="Card background" className="object-cover size-fit h-max " src={PigGameThumbnail} width={2000} height={2000} />
 												</CardBody>
@@ -331,85 +331,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center ">
-														{Header3}
-													</motion.h4>
-													<small className="text-default-500 line-clamp-4 modalOut-body ">{bodyContent3}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
-															Source Code
-														</Link>
-
-														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
-															Live Demo
-														</Link>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center ">
-														{Header3}
-													</motion.h4>
-													<small className="text-default-500 line-clamp-4 modalOut-body ">{bodyContent3}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
-															Source Code
-														</Link>
-
-														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
-															Live Demo
-														</Link>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
-												<CardBody className=" overflow-hidden py-2 ">
-													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
-												</CardBody>
-												<CardHeader className="z-auto pt-2 px-4 flex-col ">
-													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center ">
-														{Header3}
-													</motion.h4>
-													<small className="text-default-500 line-clamp-4 modalOut-body ">{bodyContent3}</small>
-												</CardHeader>
-
-												<div className="flex  pl-6  rounded-b-lg ">
-													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
-														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/guess-my-number" target="_blank" className="btn-modalOut-source">
-															Source Code
-														</Link>
-
-														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
-															Live Demo
-														</Link>
-													</CardFooter>
-												</div>
-											</Card>
-										</li>
-
-										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50  hover:shadow-xl hover:!opacity-100 group-hover:opacity-50">
+											<Card isPressable onPress={() => handleModalOpen(Header3, <GuessMyNumberContent />, <FooterContent3 onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50  hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50">
 												<CardBody className=" overflow-hidden py-2 ">
 													<Image alt="Card background" className="object-cover size-fit h-max" src={guessThumbnail} width={2000} height={2000} />
 												</CardBody>
@@ -438,11 +360,11 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB WEB DESIGN  */}
-							<Tab className="text-xs md:text-md" title="Web Design">
+							<Tab className="text-xs md:text-sm" title="Web Design">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header4, <Belle />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header4, <Belle />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center py-2">
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={BelleThumbnail} width={500} height={500} />
 												</CardBody>
@@ -456,7 +378,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header5, <BibleStudy />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header5, <BibleStudy />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center py-2">
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={BibleStudyThumbnail} width={500} height={500} />
 												</CardBody>
@@ -470,7 +392,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header7, <Hive />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header7, <Hive />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center py-2">
 													<Image alt="Card background" className="object-cover size-fit  w-full" src={HiveThumbnail} width={500} height={500} />
 												</CardBody>
@@ -487,11 +409,11 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB POSTER  */}
-							<Tab className="text-xs md:text-md" title="Poster">
+							<Tab className="text-xs md:text-sm" title="Poster">
 								<div className="flex h-full items-center px-6 mb-5  w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header6, <CapstonePoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header6, <CapstonePoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={CapstonePosterThumbnail} width={500} height={500} />
 												</CardBody>
@@ -505,7 +427,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header8, <NailPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header8, <NailPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={NailPosterThumbnail} width={500} height={500} />
 												</CardBody>
@@ -519,7 +441,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header9, <JournPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header9, <JournPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={JournPosterThumbnail} width={500} height={500} />
 												</CardBody>
@@ -533,7 +455,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header10, <PromPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header10, <PromPoster />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={PromPosterThumbnail} width={500} height={500} />
 												</CardBody>
@@ -550,11 +472,11 @@ export default function Home() {
 							</Tab>
 
 							{/* TAB REELS  */}
-							<Tab className="text-xs md:text-md" title="Reels">
+							<Tab className="text-xs md:text-sm" title="Reels">
 								<div className="flex h-full items-center px-6 mb-5 w-custom-tab">
 									<ol className="group flex w-1/2">
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header11, <Reels1 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header11, <Reels1 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5  ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reels1Thumbnail} width={500} height={500} />
 												</CardBody>
@@ -568,7 +490,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header12, <Reel2 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header12, <Reel2 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 h-72">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel2Thumbnail} width={500} height={500} />
 												</CardBody>
@@ -582,7 +504,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header13, <Reel3 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header13, <Reel3 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel3Thumbnail} width={500} height={500} />
 												</CardBody>
@@ -596,7 +518,7 @@ export default function Home() {
 										</li>
 
 										<li>
-											<Card isPressable onPress={() => handleModalOpen(Header14, <Reel4 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden hover:bg-slate-800/50 hover:shadow-xl hover:!opacity-100 group-hover:opacity-50 gap-5">
+											<Card isPressable onPress={() => handleModalOpen(Header14, <Reel4 />)} className="group relative flex flex-col justify-center items-center w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50 hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50 gap-5">
 												<CardBody className="flex flex-col items-center mt-5 ">
 													<Image alt="Card background" className="object-cover size-fit h-full" src={Reel4Thumbnail} width={500} height={500} />
 												</CardBody>
@@ -624,47 +546,47 @@ export default function Home() {
 				</section>
 
 				{/* ABOU ME */}
-				<section className="mb-20 h-full lg:h-modalH bg-cyan-600">
+				<section className="mb-20 h-full lg:h-modalH ">
 					<h3 className="text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">ABOUT ME</h3>
 					<div className="md:flex">
-						<div className="flex flex-col items-center text-center justify-center md:items-start md:text-left p-5 lg:pl-8">
+						<div className="flex flex-col lg:flex-1 items-center text-center justify-center md:items-start md:text-left p-5 lg:pl-8">
 							<div className="mb-5 lg:my-8">
 								<Image alt="Content" src={web6} width={400} height={400} className="w-40 h-40 rounded-full object-cover size-min " />
 							</div>
 							<div className="mb-5">
 								<h4 className="text-4xl lg:text-5xl tracking-tighter text-gray-800 dark:text-gray-200  font-main font-black uppercase ">Jerome Almoguera</h4>
-								<p className="text-xs sm:text-sm lg:text-md  text-gray-800 dark:text-gray-200  ">Aspiring Front-End Developer • Graphic Designer</p>
+								<p className="text-xs sm:text-sm lg:text-base  text-gray-800 dark:text-gray-200  ">Aspiring Front-End Developer • Graphic Designer</p>
 							</div>
 
-							<p className="text-sm lg:text-md py-2 lg:pr-10 text-gray-800 dark:text-gray-200  ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
+							<p className="text-sm lg:text-base py-2 lg:pr-10 text-gray-800 dark:text-gray-200  ">Hello, I'm Jerome Almoguera, graduated from La Verdad Christian College-Apalit, Philippines. During my internship, I worked as a front-end developer, but my first job led me to desktop support. Now, I’m determined to realign my career with my true passion for web development. </p>
 						</div>
 
 						{/* WORK EXPERIENCE */}
 
 						<ScrollShadow hideScrollBar className="lg:flex-1  overflow-scroll overflow-x-hidden ">
-							<ol className="md:group h-custom-30">
-								<li className="group dark:text-white dark:hover:text-orange-400 md:hover:bg-slate-800/50 md:hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
+							<ol className="group h-custom-30">
+								<li className="group dark:text-white dark:hover:text-orange-400 md:hover:bg-slate-800/50 md:hover:shadow-l md:hover:!opacity-100  md:group-hover:opacity-50 mb-5 p-3 rounded-md">
 									<div className="flex flex-col">
 										<header className="lg:flex-2 w-52  text-xs font-medium uppercase pt-1 text-white/75 ">September 2023 — JULY 2024</header>
 										<div className="lg:flex-1">
-											<h5 className=" text-md font-semibold mb-3 ">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
+											<h5 className=" text-base font-semibold mb-3 ">Desktop Support Engineeer · Qstrike Innovation Phils., OPC</h5>
 											<p className=" text-xs sm:text-sm text-white/75">
 												<ul>
 													<li className="mb-2">• Install, configure, and maintain computer hardware components, peripherals, and software applications.</li>
 													<li className="mb-2">• Diagnose and resolve hardware and software issues, including troubleshooting and providing technical support to end‑users.</li>
 													<li className="mb-2">• Analyze technical problems, identify root causes, and implement effective solutions to minimize downtime and disruptions.</li>
-													<li className="mb-2">• Provide remotetechnical assistance to off‑site users through phone, email, or remote desktop tools (AnyDesk).</li>
+													<li className="mb-2">• Provide remote technical assistance to off‑site users through phone, email, or remote desktop tools (AnyDesk).</li>
 												</ul>
 											</p>
 										</div>
 									</div>
 								</li>
 
-								<li className="group dark:text-white dark:hover:text-orange-400 md:hover:bg-slate-800/50 md:hover:shadow-l hover:!opacity-100 group-hover:opacity-50 mb-5 p-3 rounded-md">
+								<li className="group dark:text-white dark:hover:text-orange-400 md:hover:bg-slate-800/50 md:hover:shadow-l md:hover:!opacity-100  md:group-hover:opacity-50 mb-5 p-3 rounded-md">
 									<div className="flex flex-col">
 										<header className="flex-2 w-52  text-xs font-medium uppercase pt-1 text-white/75">March — June 2023</header>
 										<div className="flex-1">
-											<h5 className=" text-md font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
+											<h5 className=" text-base font-semibold mb-3">Front-End Developer Intern · Qstrike Innovation Phils., OPC</h5>
 											<p className="text-xs sm:text-sm text-white/75">
 												<ul>
 													<li className="mb-2">• Collaborated in Agile development environments, participating in daily stand‑ups, sprint planning, demonstrations, and code reviews to deliver high‑quality code within project timelines.</li>
@@ -681,11 +603,11 @@ export default function Home() {
 				</section>
 
 				{/* ========================== CONTACT ========================== */}
-				<section className=" mb-20 bg-purple-600">
+				<section className=" mb-20">
 					<h3 className="text-4xl md:text-5xl lg:text-6xl py-1 font-main font-black md:ml-4 lg:ml-8 dark:text-white">CONTACT</h3>
 					<div className=" container my-5 pl-8 ">
 						<section>
-							<p className="text-sm sm:text-md lg:text-lg mb-12 lg:w-3/5 dark:text-white">I’m excited to connect! Whether it’s for project discussions, collaboration opportunities, or any inquiries, don’t hesitate to reach out—I’d be glad to help!</p>
+							<p className="text-sm sm:text-base lg:text-lg mb-12 lg:w-3/5 dark:text-white">I’m excited to connect! Whether it’s for project discussions, collaboration opportunities, or any inquiries, don’t hesitate to reach out—I’d be glad to help!</p>
 
 							<div className="flex flex-wrap ">
 								<div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
