@@ -45,6 +45,9 @@ import guessThumbnail from "../components/modalContents/guessMyNumber/thumbnail.
 import PigGameContent, { header as Header2, bodyContent as bodyContent2, FooterContent as FooterContent2 } from "../components/modalContents/pigGame/PigGameContent";
 import PigGameThumbnail from "../components/modalContents/pigGame/thumbnail.png";
 
+import Bankist, { header as BankistHeader, bodyContent as BankistContent, FooterContent as BankistFooter } from "../components/modalContents/bankist/Bankist";
+import BankistThumbnail from "../components/modalContents/bankist/home.png";
+
 import Belle, { header as Header4, bodyContent as bodyContent4 } from "../components/modalContents/belle/Belle";
 import BelleThumbnail from "../components/modalContents/belle/thumbnail.png";
 
@@ -349,6 +352,32 @@ export default function Home() {
 														</Link>
 
 														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/guess-my-number/" target="_blank" className="btn-modalOut-live">
+															Live Demo
+														</Link>
+													</CardFooter>
+												</div>
+											</Card>
+										</li>
+
+										<li>
+											<Card isPressable onPress={() => handleModalOpen(BankistHeader, <Bankist />, <BankistFooter onClose={handleModalClose} />)} className="group w-72 h-custom-30 my-auto mr-10 hover:text-dark-orange overflow-hidden bg-slate-800/50 md:bg-transparent md:hover:bg-slate-800/50  hover:shadow-xl md:hover:!opacity-100 md:group-hover:opacity-50">
+												<CardBody className=" overflow-hidden py-2 ">
+													<Image alt="Card background" className="object-cover size-fit h-max" src={BankistThumbnail} width={2000} height={2000} />
+												</CardBody>
+												<CardHeader className="z-auto pt-2 px-4 flex-col ">
+													<motion.h4 whileHover={{ scale: 1.1 }} className="mb-2 font-bold text-large truncate w-full text-center ">
+														{BankistHeader}
+													</motion.h4>
+													<small className="text-default-500 line-clamp-4 modalOut-body ">{BankistContent}</small>
+												</CardHeader>
+
+												<div className="flex  pl-6  rounded-b-lg ">
+													<CardFooter className="  justify-evenly before:bg-white/10 overflow-hidden py-1 absolute bottom-1 w-[calc(80%_-_8px)] ml-1 mb-2">
+														<Link isBlock color="foreground" href="https://github.com/jeromealmoguera/bankist" target="_blank" className="btn-modalOut-source">
+															Source Code
+														</Link>
+
+														<Link isBlock color="foreground" href="https://jeromealmoguera.github.io/bankist/" target="_blank" className="btn-modalOut-live">
 															Live Demo
 														</Link>
 													</CardFooter>
